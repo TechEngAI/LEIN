@@ -39,7 +39,11 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
             >
               <div className="card-top">
                 <span className="type-label" style={{ color: getTypeColor(incident.type) }}>{incident.type}</span>
-                <span className="time-ago">{new Date(incident.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                <span className="time-ago">
+                  {incident.timestamp
+                    ? new Date(incident.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                    : 'Just now'}
+                </span>
               </div>
               <div className="lga-label">{incident.lga} LGA</div>
               

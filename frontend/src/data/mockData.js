@@ -1,9 +1,9 @@
 export const mockIncidents = [
-  { id: 1, type: 'Medical', description: 'Patient unresponsive', lat: 6.5244, lng: 3.3792, severity: 5, priority_score: 9.2, lga: 'Ikeja', status: 'active' },
-  { id: 2, type: 'Fire', description: 'Building on fire', lat: 6.4531, lng: 3.3958, severity: 4, priority_score: 8.5, lga: 'Lagos Island', status: 'active' },
-  { id: 3, type: 'Security', description: 'Armed robbery in progress', lat: 6.5000, lng: 3.3500, severity: 5, priority_score: 9.8, lga: 'Surulere', status: 'active' },
-  { id: 4, type: 'Accident', description: 'Two cars collided on bridge', lat: 6.4500, lng: 3.4000, severity: 3, priority_score: 6.0, lga: 'Eti-Osa', status: 'active' },
-  { id: 5, type: 'Medical', description: 'Asthma attack', lat: 6.5500, lng: 3.3500, severity: 3, priority_score: 5.5, lga: 'Mushin', status: 'active' }
+  { id: 1, type: 'Medical', description: 'Patient unresponsive', lat: 6.5244, lng: 3.3792, severity: 5, priority_score: 9.2, lga: 'Ikeja', status: 'active', timestamp: new Date(Date.now() - 5 * 60000).toISOString() },
+  { id: 2, type: 'Fire', description: 'Building on fire', lat: 6.4531, lng: 3.3958, severity: 4, priority_score: 8.5, lga: 'Lagos Island', status: 'active', timestamp: new Date(Date.now() - 12 * 60000).toISOString() },
+  { id: 3, type: 'Security', description: 'Armed robbery in progress', lat: 6.5000, lng: 3.3500, severity: 5, priority_score: 9.8, lga: 'Surulere', status: 'active', timestamp: new Date(Date.now() - 2 * 60000).toISOString() },
+  { id: 4, type: 'Accident', description: 'Two cars collided on bridge', lat: 6.4500, lng: 3.4000, severity: 3, priority_score: 6.0, lga: 'Eti-Osa', status: 'active', timestamp: new Date(Date.now() - 20 * 60000).toISOString() },
+  { id: 5, type: 'Medical', description: 'Asthma attack', lat: 6.5500, lng: 3.3500, severity: 3, priority_score: 5.5, lga: 'Mushin', status: 'active', timestamp: new Date(Date.now() - 35 * 60000).toISOString() }
 ];
 
 export const mockHospitals = [

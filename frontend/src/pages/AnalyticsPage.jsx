@@ -85,8 +85,8 @@ export default function AnalyticsPage() {
   return (
     <div className="analytics-container">
       <div className="analytics-header analytics-row">
-        <h1>Analytics & Forecasting</h1>
-        <p>Powered by LEIN AI</p>
+        <h1>📊 Analytics &amp; Forecasting</h1>
+        <p>Real-time intelligence powered by LEIN AI — Lagos Emergency Intelligence Network</p>
       </div>
 
       <div className="analytics-row">

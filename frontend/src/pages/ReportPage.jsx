@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { gsap } from 'gsap';
-import logo from '../assets/logo.png';
 
 const EMERGENCY_TYPES = [
   { id: 'Medical', icon: '🏥', label: 'Medical' },
@@ -29,7 +28,6 @@ export default function ReportPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState(null);
   
-  // Refs for auto-resizing textarea
   const textareaRef = useRef(null);
   const cardRef = useRef(null);
 
@@ -47,24 +45,16 @@ export default function ReportPage() {
   }, []);
 
   const handleLocationDetect = () => {
-    if (!navigator.geolocation) {
-      setLocationError(true);
-      return;
-    }
+    if (!navigator.geolocation) { setLocationError(true); return; }
     navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
-        setLocationError(false);
-      },
-      () => {
-        setLocationError(true);
-      }
+      (pos) => { setLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude }); setLocationError(false); },
+      () => { setLocationError(true); }
     );
   };
 
   const getSeverityColor = (val) => {
     if (val <= 2) return 'var(--safe-green)';
-    if (val === 3) return '#F39C12'; // Orange
+    if (val === 3) return '#F39C12';
     return 'var(--alert-red)';
   };
 
@@ -72,17 +62,13 @@ export default function ReportPage() {
     const newErrors = {};
     if (!type) newErrors.type = 'Please select an emergency type';
     if (description.length < 10) newErrors.description = 'Description must be at least 10 characters';
-    
     const finalLat = location ? location.lat : parseFloat(manualLat);
     const finalLng = location ? location.lng : parseFloat(manualLng);
-
-    // Only validate bounds if a location was actually provided
     if (!isNaN(finalLat) && !isNaN(finalLng)) {
       if (finalLat < 6.2 || finalLat > 6.8 || finalLng < 3.1 || finalLng > 3.7) {
         newErrors.location = 'Location appears outside Lagos — please verify';
       }
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -90,33 +76,17 @@ export default function ReportPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-    
     setIsSubmitting(true);
     const finalLat = location ? location.lat : parseFloat(manualLat);
     const finalLng = location ? location.lng : parseFloat(manualLng);
-
     try {
-      const reportRes = await api.post('/report', { 
-        type, 
-        description, 
-        lat: finalLat, 
-        lng: finalLng, 
-        severity_hint: severityHint 
-      });
+      const reportRes = await api.post('/report', { type, description, lat: finalLat, lng: finalLng, severity_hint: severityHint });
       const { incident_id } = reportRes.data;
-      
       const classifyRes = await api.post('/classify', { incident_id });
       setResult(classifyRes.data);
     } catch (err) {
       console.warn('API failed, using mock result', err);
-      // Mock fallback
-      setResult({
-        type: type,
-        confidence: 0.92,
-        keywords: ['emergency', 'urgent'],
-        priority_score: 7,
-        mockFallback: true
-      });
+      setResult({ type, confidence: 0.92, keywords: ['emergency', 'urgent'], priority_score: 7, mockFallback: true });
     } finally {
       setIsSubmitting(false);
     }
@@ -124,13 +94,9 @@ export default function ReportPage() {
 
   if (result) {
     return (
-      <div className="report-container">
-        <motion.div 
-          className="result-card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <div className="success-banner">✓ Report submitted</div>
+      <div className="report-page">
+        <motion.div className="result-card" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <div className="success-banner">✓ Report submitted successfully</div>
           {result.mockFallback && (
             <div className="error-text" style={{ textAlign: 'center', marginBottom: '16px' }}>
               AI offline — using fallback classification
@@ -143,9 +109,7 @@ export default function ReportPage() {
             <div><strong>Priority Score:</strong> {result.priority_score}/10</div>
           </div>
           <div className="keywords">
-            {result.keywords?.map(kw => (
-              <span key={kw} className="chip">{kw}</span>
-            ))}
+            {result.keywords?.map(kw => <span key={kw} className="chip">{kw}</span>)}
           </div>
           <button className="btn-primary mt-4" onClick={() => navigate('/dashboard')}>
             View Dashboard →
@@ -156,23 +120,19 @@ export default function ReportPage() {
   }
 
   return (
-    <div className="report-container">
+    <div className="report-page">
       <div className="report-card" ref={cardRef}>
         <div className="report-header">
-          <img src={logo} alt="LEIN" style={{ width: '48px', height: '48px', borderRadius: '8px', marginBottom: '8px', objectFit: 'cover' }} />
-          <h1 style={{ fontSize: '28px', fontWeight: '700', color: 'var(--navy)' }}>LEIN</h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: '14px', marginTop: '4px' }}>
-            Lagos Emergency Intelligence Network
-          </p>
-          <p style={{ color: 'var(--accent-blue)', fontWeight: '500', marginTop: '8px' }}>
-            Report an Emergency — English or Pidgin accepted
-          </p>
+          <div className="report-header-icon">🚨</div>
+          <h1>LEIN</h1>
+          <p className="tagline">Lagos Emergency Intelligence Network</p>
+          <span className="pidgin-note">🗣 English or Pidgin accepted</span>
         </div>
 
         <form onSubmit={handleSubmit} className="report-form">
-          {/* Emergency Type Selector */}
+          {/* Emergency Type */}
           <div className="form-group">
-            <label>Emergency Type</label>
+            <label className="form-label">Emergency Type</label>
             <div className="type-grid">
               {EMERGENCY_TYPES.map(et => (
                 <motion.div
@@ -192,12 +152,12 @@ export default function ReportPage() {
 
           {/* Description */}
           <div className="form-group">
-            <label>Description</label>
+            <label className="form-label">Description</label>
             <textarea
               ref={textareaRef}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="Describe the emergency in English or Pidgin... e.g. 'e don do am, e no dey breathe'"
+              placeholder="Describe the emergency... e.g. 'e don do am, e no dey breathe'"
               rows={3}
               style={{ minHeight: '80px', maxHeight: '200px' }}
             />
@@ -207,27 +167,20 @@ export default function ReportPage() {
 
           {/* Location */}
           <div className="form-group">
-            <label>Location</label>
-            {!location ? (
+            <label className="form-label">Location</label>
+            {!location && (
               <button type="button" className="btn-secondary" onClick={handleLocationDetect}>
                 📍 Auto-detect my location
               </button>
-            ) : null}
-            
+            )}
             <AnimatePresence>
               {location && (
-                <motion.div 
-                  className="location-badge"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                >
+                <motion.div className="location-badge" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
                   ✓ Detected: {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
                   <button type="button" className="btn-text" onClick={() => setLocation(null)}>Change</button>
                 </motion.div>
               )}
             </AnimatePresence>
-
             {locationError && !location && (
               <div className="manual-location mt-2">
                 <input type="number" step="any" placeholder="Latitude" value={manualLat} onChange={e => setManualLat(e.target.value)} />
@@ -239,14 +192,11 @@ export default function ReportPage() {
 
           {/* Severity */}
           <div className="form-group">
-            <label>Severity ({severityHint})</label>
-            <input 
-              type="range" 
-              min="1" 
-              max="5" 
-              value={severityHint} 
+            <label className="form-label">Severity ({severityHint})</label>
+            <input
+              type="range" min="1" max="5" value={severityHint}
               onChange={e => setSeverityHint(parseInt(e.target.value))}
-              style={{ accentColor: getSeverityColor(severityHint), transition: 'accent-color 0.3s' }}
+              style={{ accentColor: getSeverityColor(severityHint) }}
             />
             <div className="severity-labels">
               <span>1 = Minor</span>
