@@ -1,0 +1,14 @@
+:root {
+  --navy: #0D1B3E;
+  --accent-blue: #2E6BE6;
+  --alert-red: #C0392B;
+  --safe-green: #1A7A4A;
+  --white: #FFFFFF;
+  --bg-light: #F4F6FB;
+  --text-primary: #0D1B3E;
+  --text-muted: #6B7A99;
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(13,27,62,0.10);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; background: var(--bg-light); color: var(--text-primary); }
