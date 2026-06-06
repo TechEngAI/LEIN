@@ -38,11 +38,11 @@ const responderIcon = new L.DivIcon({
 
 const getTypeColor = (type) => {
   switch (type) {
-    case 'Medical': return 'var(--accent-blue)';
-    case 'Fire': return 'var(--alert-red)';
+    case 'Medical': return '#2E6BE6';   // --accent-blue
+    case 'Fire': return '#C0392B';      // --alert-red
     case 'Security': return '#F39C12';
     case 'Accident': return '#F1C40F';
-    default: return 'gray';
+    default: return '#6B7A99';
   }
 };
 
@@ -54,7 +54,7 @@ function MapAnimator() {
   return null;
 }
 
-export default function LEINMap({ incidents, hospitals, responders, selectedIncident, setSelectedIncident }) {
+export default function LEINMap({ incidents, hospitals, responders, setSelectedIncident }) {
   const defaultCenter = [6.5244, 3.3792]; // Lagos
 
   return (

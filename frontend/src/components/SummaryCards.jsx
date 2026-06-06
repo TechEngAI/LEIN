@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 
 export default function SummaryCards({ activeCount, avgResponse, respondersCount }) {
+
   const cards = [
-    { title: '🚨 Active Incidents', value: activeCount },
-    { title: '⏱ Avg Response Time', value: avgResponse },
-    { title: '🚑 Responders On Duty', value: respondersCount }
+    { title: 'Active Incidents', value: activeCount, icon: '🚨', color: 'var(--alert-red)' },
+    { title: 'Avg Response Time', value: avgResponse, icon: '⏱', color: 'var(--accent-blue)' },
+    { title: 'Responders On Duty', value: respondersCount, icon: '🚑', color: 'var(--safe-green)' }
   ];
 
   return (
@@ -17,7 +18,8 @@ export default function SummaryCards({ activeCount, avgResponse, respondersCount
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
         >
-          <div className="sc-value">{card.value}</div>
+          <div style={{ fontSize: '28px', marginBottom: '8px' }}>{card.icon}</div>
+          <div className="sc-value" style={{ color: card.color }}>{card.value}</div>
           <div className="sc-title">{card.title}</div>
         </motion.div>
       ))}

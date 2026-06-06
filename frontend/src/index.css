@@ -361,3 +361,45 @@ input[type="range"] {
   .analytics-container { padding: 16px; }
   .summary-cards { flex-direction: column; }
 }
+
+/* Phase 1 Bug Fixes - Missing Classes */
+.incident-queue { display: flex; flex-direction: column; height: 100%; }
+.card-bottom { display: flex; justify-content: flex-start; }
+.incident-detail-panel { display: flex; flex-direction: column; height: 100%; }
+.detail-actions { display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 16px; }
+.hospital-list { display: flex; flex-direction: column; gap: 8px; }
+.report-form { display: flex; flex-direction: column; }
+.submit-btn { margin-top: 8px; }
+
+/* Phase 2 Polish */
+/* Navbar sticky fix */
+.app-content { min-height: calc(100vh - 60px); }
+
+/* Queue empty state */
+.queue-empty { padding: 32px 16px; text-align: center; color: var(--text-muted); font-size: 14px; }
+
+/* Smooth priority bar transition */
+.priority-bar-fill { transition: width 0.4s ease; }
+
+/* Detail actions spacing */
+.detail-actions { border-top: 1px solid #E8EDF9; padding-top: 16px; margin-top: 16px; }
+
+/* Hospital capacity bar colour transition */
+.h-bar { transition: width 0.3s ease; }
+
+/* Forecast table hover */
+.forecast-table tbody tr:hover { background: #EEF2FB; }
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-line {
+  background: linear-gradient(90deg, #E8EDF9 25%, #F4F6FB 50%, #E8EDF9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Map loading overlay */
+.map-wrapper .leaflet-container { border-radius: 0; }

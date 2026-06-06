@@ -1,9 +1,17 @@
-export default function LoadingSkeleton() {
+export default function LoadingSkeleton({ rows = 3 }) {
   return (
-    <div className="skeleton-container" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-      <div className="skeleton-line" style={{ height: '20px', width: '80%', background: '#E8EDF9', borderRadius: '4px' }} />
-      <div className="skeleton-line" style={{ height: '20px', width: '60%', background: '#E8EDF9', borderRadius: '4px' }} />
-      <div className="skeleton-line" style={{ height: '20px', width: '90%', background: '#E8EDF9', borderRadius: '4px' }} />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      {Array.from({ length: rows }).map((_, i) => (
+        <div
+          key={i}
+          className="skeleton-line"
+          style={{
+            height: '18px',
+            width: `${[80, 60, 90][i % 3]}%`,
+            borderRadius: '4px'
+          }}
+        />
+      ))}
     </div>
   );
 }

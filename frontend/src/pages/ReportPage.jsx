@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
+import { gsap } from 'gsap';
+import logo from '../assets/logo.png';
 
 const EMERGENCY_TYPES = [
   { id: 'Medical', icon: '🏥', label: 'Medical' },
@@ -29,6 +31,7 @@ export default function ReportPage() {
   
   // Refs for auto-resizing textarea
   const textareaRef = useRef(null);
+  const cardRef = useRef(null);
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -36,6 +39,12 @@ export default function ReportPage() {
       textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
     }
   }, [description]);
+
+  useEffect(() => {
+    if (cardRef.current) {
+      gsap.from(cardRef.current, { y: 40, opacity: 0, duration: 0.6, ease: 'power2.out' });
+    }
+  }, []);
 
   const handleLocationDetect = () => {
     if (!navigator.geolocation) {
@@ -67,8 +76,11 @@ export default function ReportPage() {
     const finalLat = location ? location.lat : parseFloat(manualLat);
     const finalLng = location ? location.lng : parseFloat(manualLng);
 
-    if (finalLat < 6.2 || finalLat > 6.8 || finalLng < 3.1 || finalLng > 3.7) {
-      newErrors.location = 'Location appears outside Lagos — please verify';
+    // Only validate bounds if a location was actually provided
+    if (!isNaN(finalLat) && !isNaN(finalLng)) {
+      if (finalLat < 6.2 || finalLat > 6.8 || finalLng < 3.1 || finalLng > 3.7) {
+        newErrors.location = 'Location appears outside Lagos — please verify';
+      }
     }
 
     setErrors(newErrors);
@@ -145,10 +157,16 @@ export default function ReportPage() {
 
   return (
     <div className="report-container">
-      <div className="report-card">
+      <div className="report-card" ref={cardRef}>
         <div className="report-header">
-          <h1>LEIN</h1>
-          <p>Report an Emergency — English or Pidgin accepted</p>
+          <img src={logo} alt="LEIN" style={{ width: '48px', height: '48px', borderRadius: '8px', marginBottom: '8px', objectFit: 'cover' }} />
+          <h1 style={{ fontSize: '28px', fontWeight: '700', color: 'var(--navy)' }}>LEIN</h1>
+          <p style={{ color: 'var(--text-muted)', fontSize: '14px', marginTop: '4px' }}>
+            Lagos Emergency Intelligence Network
+          </p>
+          <p style={{ color: 'var(--accent-blue)', fontWeight: '500', marginTop: '8px' }}>
+            Report an Emergency — English or Pidgin accepted
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="report-form">

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function IncidentQueue({ incidents, selectedIncident, setSelectedIncident }) {
   const getTypeColor = (type) => {
@@ -24,34 +24,40 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
         <span className="live-badge">{incidents.length} Live</span>
       </div>
       <div className="queue-list">
-        {incidents.map((incident) => (
-          <motion.div
-            layout
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            key={incident.id}
-            className={`queue-card ${selectedIncident?.id === incident.id ? 'selected' : ''}`}
-            onClick={() => setSelectedIncident(incident)}
-            style={{ borderLeftColor: getTypeColor(incident.type) }}
-          >
-            <div className="card-top">
-              <span className="type-label">{incident.type}</span>
-              <span className="time-ago">Just now</span>
-            </div>
-            <div className="lga-label">📍 {incident.lga}</div>
-            
-            <div className="priority-bar-container">
-              <div 
-                className="priority-bar-fill" 
-                style={{ width: `${(incident.priority_score / 10) * 100}%` }} 
-              />
-            </div>
+        <AnimatePresence>
+          {incidents.map((incident) => (
+            <motion.div
+              layout
+              key={incident.id}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.25 }}
+              className={`queue-card ${selectedIncident?.id === incident.id ? 'selected' : ''}`}
+              onClick={() => setSelectedIncident(incident)}
+              style={{ borderLeftColor: getTypeColor(incident.type) }}
+            >
+              <div className="card-top">
+                <span className="type-label" style={{ color: getTypeColor(incident.type) }}>{incident.type}</span>
+                <span className="time-ago">{new Date(incident.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+              </div>
+              <div className="lga-label">{incident.lga} LGA</div>
+              
+              <div className="priority-bar-container">
+                <div 
+                  className="priority-bar-fill" 
+                  style={{ width: `${(incident.priority_score / 10) * 100}%` }} 
+                />
+              </div>
 
-            <div className="card-bottom">
-              {getSeverityBadge(incident.severity)}
-            </div>
-          </motion.div>
-        ))}
+              <div className="card-bottom">
+                <span className={`badge ${incident.priority_score > 7 ? 'danger' : incident.priority_score > 4 ? 'warn' : 'safe'}`}>
+                  Priority {incident.priority_score}/10
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </div>
   );

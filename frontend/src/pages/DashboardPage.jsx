@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import IncidentQueue from '../components/IncidentQueue';
 import LEINMap from '../components/LEINMap';
 import IncidentDetail from '../components/IncidentDetail';
+import EmptyState from '../components/EmptyState';
 import { mockIncidents, mockHospitals, mockResponders } from '../data/mockData';
 import api from '../services/api';
 
@@ -34,7 +35,7 @@ export default function DashboardPage() {
   // Fetch hospitals when incident selected
   useEffect(() => {
     if (!selectedIncident) {
-      setHospitals([]);
+      setTimeout(() => setHospitals([]), 0);
       return;
     }
     const fetchHospitals = async () => {
@@ -61,6 +62,10 @@ export default function DashboardPage() {
     if (selectedIncident?.id === id) {
       setSelectedIncident(null);
     }
+  };
+
+  const handleAssign = (responderId) => {
+    setResponders(prev => prev.map(r => r.id === responderId ? { ...r, status: 'busy' } : r));
   };
 
   if (globalError) {
@@ -94,6 +99,7 @@ export default function DashboardPage() {
           hospitals={hospitals}
           loadingHospitals={loadingHospitals}
           onResolve={handleResolve}
+          onAssign={handleAssign}
           responders={responders}
         />
       </div>

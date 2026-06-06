@@ -22,20 +22,22 @@ export default function AnalyticsPage() {
 
   useEffect(() => {
     // Animate rows
-    gsap.fromTo('.analytics-row', 
-      { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '.analytics-container',
-          start: 'top 80%'
+    const timer = setTimeout(() => {
+      gsap.fromTo('.analytics-row', 
+        { opacity: 0, y: 30 },
+        { 
+          opacity: 1, 
+          y: 0, 
+          stagger: 0.15,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.analytics-container',
+            start: 'top 80%'
+          }
         }
-      }
-    );
+      );
+    }, 100);
 
     const abortController = new AbortController();
 
@@ -64,18 +66,21 @@ export default function AnalyticsPage() {
     fetchAnalytics();
 
     return () => {
+      clearTimeout(timer);
       abortController.abort();
     };
   }, []);
 
   // Mock hourly data
-  const hourlyData = Array.from({length: 24}).map((_, i) => ({
-    hour: `${i}:00`,
-    medical: Math.floor(Math.random() * 10) + (i > 7 && i < 18 ? 5 : 0),
-    fire: Math.floor(Math.random() * 3),
-    security: Math.floor(Math.random() * 5) + (i > 18 ? 4 : 0),
-    accident: Math.floor(Math.random() * 4) + (i === 8 || i === 17 ? 6 : 0)
-  }));
+  const [hourlyData] = useState(() => 
+    Array.from({length: 24}).map((_, i) => ({
+      hour: `${i}:00`,
+      medical: Math.floor(Math.random() * 10) + (i > 7 && i < 18 ? 5 : 0),
+      fire: Math.floor(Math.random() * 3),
+      security: Math.floor(Math.random() * 5) + (i > 18 ? 4 : 0),
+      accident: Math.floor(Math.random() * 4) + (i === 8 || i === 17 ? 6 : 0)
+    }))
+  );
 
   return (
     <div className="analytics-container">

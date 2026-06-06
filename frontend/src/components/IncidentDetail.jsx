@@ -4,7 +4,7 @@ import LoadingSkeleton from './LoadingSkeleton';
 import api from '../services/api';
 import { useState } from 'react';
 
-export default function IncidentDetail({ incident, hospitals, loadingHospitals, onResolve, responders }) {
+export default function IncidentDetail({ incident, hospitals, loadingHospitals, onResolve, onAssign, responders }) {
   const [assigning, setAssigning] = useState(false);
   const [eta, setEta] = useState(null);
 
@@ -21,9 +21,11 @@ export default function IncidentDetail({ incident, hospitals, loadingHospitals, 
     try {
       const res = await api.post('/assign', { incident_id: incident.id, responder_id: 1 }); // Mock responder_id
       setEta(res.data.eta || '12 mins');
+      if (onAssign) onAssign(1);
     } catch {
       // Mock ETA on error
       setEta('12 mins (mock)');
+      if (onAssign) onAssign(1);
     } finally {
       setAssigning(false);
     }
