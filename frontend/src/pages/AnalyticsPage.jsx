@@ -44,9 +44,9 @@ export default function AnalyticsPage() {
 
     const abortController = new AbortController();
     (async () => {
-      try { const r = await api.get('/stats/heatmap', { signal: abortController.signal }); setHeatmap(r.data); } catch {}
-      try { const r = await api.get('/forecast', { signal: abortController.signal }); setForecast(r.data); } catch {}
-      try { const r = await api.get('/incidents', { signal: abortController.signal }); setSummaryStats(p => ({ ...p, activeCount: r.data.length })); } catch {}
+      try { const r = await api.get('/stats/heatmap', { signal: abortController.signal }); setHeatmap(r.data); } catch { console.warn("API offline, using mock heatmap"); }
+      try { const r = await api.get('/forecast', { signal: abortController.signal }); setForecast(r.data); } catch { console.warn("API offline, using mock forecast"); }
+      try { const r = await api.get('/incidents', { signal: abortController.signal }); setSummaryStats(p => ({ ...p, activeCount: r.data.length })); } catch { console.warn("API offline, using mock incidents"); }
     })();
 
     return () => { clearTimeout(timer); abortController.abort(); };
