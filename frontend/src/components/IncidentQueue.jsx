@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Flame, ShieldAlert, CarFront } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const TYPE_META = {
   Medical:  { icon: Activity,    color: 'var(--med-blue)' },
@@ -9,6 +10,13 @@ const TYPE_META = {
 };
 
 export default function IncidentQueue({ incidents, selectedIncident, setSelectedIncident }) {
+  const [now, setNow] = useState(Date.now());
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 60000);
+    return () => clearInterval(timer);
+  }, []);
+
   const getMeta = (type) => TYPE_META[type] || { icon: Activity, color: '#94A3B8' };
 
   return (
@@ -68,7 +76,7 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
               </div>
 
               <div className="inc-time">
-                Reported {incident.timestamp ? Math.floor((Date.now() - new Date(incident.timestamp).getTime()) / 60000) : '2'} minutes ago
+                Reported {incident.timestamp ? Math.floor((now - new Date(incident.timestamp).getTime()) / 60000) : '2'} minutes ago
               </div>
             </motion.div>
           );

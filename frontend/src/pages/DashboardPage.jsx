@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
-import { ShieldAlert, Activity, Users, Building2, Server, BrainCircuit, ActivitySquare } from 'lucide-react';
+import { Activity, Users, Building2, Server, BrainCircuit, ActivitySquare } from 'lucide-react';
 import LEINMap from '../components/LEINMap';
 import IncidentQueue from '../components/IncidentQueue';
 import api from '../services/api';
-import { motion } from 'framer-motion';
 
 export default function DashboardPage() {
   const [incidents, setIncidents] = useState([]);
   const [responders, setResponders] = useState([]);
-  const [hospitals, setHospitals] = useState([]);
   const [selectedIncident, setSelectedIncident] = useState(null);
 
   useEffect(() => {
