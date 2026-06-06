@@ -9,7 +9,7 @@ const TYPE_META = {
   Accident: { icon: CarFront,    color: 'var(--warn-amber)' },
 };
 
-export default function IncidentQueue({ incidents, selectedIncident, setSelectedIncident }) {
+export default function IncidentQueue({ incidents, selectedId, onSelect }) {
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
         {incidents.map((incident) => {
           const meta = getMeta(incident.type);
           const Icon = meta.icon;
-          const isSelected = selectedIncident?.id === incident.id;
+          const isSelected = selectedId === incident.id;
           const isCritical = incident.priority_score > 7;
           
           return (
@@ -41,7 +41,7 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
                 '--severity-color': isCritical ? 'var(--alert-red)' : meta.color,
                 boxShadow: isCritical && isSelected ? '0 0 24px rgba(229,72,77,0.2)' : 'none'
               }}
-              onClick={() => setSelectedIncident(incident)}
+              onClick={() => onSelect(incident.id)}
             >
               <div className="inc-header">
                 <div className="inc-type" style={{ color: meta.color }}>

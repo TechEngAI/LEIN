@@ -119,7 +119,7 @@ export default function DashboardPage() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <LEINMap incidents={incidents} hospitals={hospitals} responders={responders} />
+        <LEINMap incidents={incidents} hospitals={hospitals} responders={responders} setSelectedIncident={setSelectedIncident} />
       </motion.div>
 
       {/* LOWER GRID LAYOUT (3 Columns) */}

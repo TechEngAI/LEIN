@@ -30,10 +30,12 @@ export const mockHeatmap = [
 ];
 
 export const mockForecast = [
-  { hour: '1:00 PM', medical: 3, fire: 1, security: 2, accident: 1 },
-  { hour: '2:00 PM', medical: 4, fire: 0, security: 1, accident: 2 },
-  { hour: '3:00 PM', medical: 2, fire: 1, security: 3, accident: 1 },
-  { hour: '4:00 PM', medical: 5, fire: 0, security: 2, accident: 3 },
-  { hour: '5:00 PM', medical: 8, fire: 2, security: 4, accident: 5 },
-  { hour: '6:00 PM', medical: 7, fire: 1, security: 3, accident: 4 }
+  { lga: 'Ikeja',       type: 'Medical',  predicted_incidents: 8,  hour: '1:00 PM' },
+  { lga: 'Lekki',       type: 'Fire',     predicted_incidents: 3,  hour: '2:00 PM' },
+  { lga: 'Surulere',    type: 'Security', predicted_incidents: 18, hour: '3:00 PM' },
+  { lga: 'Lagos Island',type: 'Medical',  predicted_incidents: 6,  hour: '4:00 PM' },
+  { lga: 'Mushin',      type: 'Accident', predicted_incidents: 4,  hour: '5:00 PM' },
+  { lga: 'Alimosho',    type: 'Medical',  predicted_incidents: 22, hour: '6:00 PM' },
+  { lga: 'Eti-Osa',     type: 'Security', predicted_incidents: 9,  hour: '7:00 PM' },
+  { lga: 'Kosofe',      type: 'Fire',     predicted_incidents: 5,  hour: '8:00 PM' },
 ];
