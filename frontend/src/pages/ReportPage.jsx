@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Activity, Flame, ShieldAlert, CarFront, CheckCircle2, Mic, MapPin } from 'lucide-react';
 import api from '../services/api';
@@ -26,7 +26,7 @@ function AIProcessingSequence() {
       setActive(p => (p < steps.length ? p + 1 : p));
     }, 600);
     return () => clearInterval(int);
-  }, []);
+  }, [steps.length]);
 
   return (
     <div className="ai-processing-sequence">

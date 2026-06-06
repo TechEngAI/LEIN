@@ -3,7 +3,7 @@ import { useState } from 'react';
 import api from '../services/api';
 import { MapPin, BrainCircuit, Navigation } from 'lucide-react';
 
-export default function IncidentDetail({ incident, hospitals, loadingHospitals, onResolve, responders }) {
+export default function IncidentDetail({ incident, hospitals, onResolve }) {
   const [assigning, setAssigning] = useState(false);
   const [eta, setEta] = useState(null);
 

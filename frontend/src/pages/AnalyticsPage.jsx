@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Brain, Cpu, Map as MapIcon, CalendarRange } from 'lucide-react';
+import { Brain, Cpu, Map as MapIcon, CalendarRange, ActivitySquare } from 'lucide-react';
 import SummaryCards from '../components/SummaryCards';
 import LGABarChart from '../components/LGABarChart';
 import HourlyTrendChart from '../components/HourlyTrendChart';

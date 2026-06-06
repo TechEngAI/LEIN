@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { ShieldAlert, Activity, LayoutDashboard, LineChart } from 'lucide-react';
 

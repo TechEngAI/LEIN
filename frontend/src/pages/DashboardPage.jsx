@@ -18,7 +18,7 @@ export default function DashboardPage() {
         setIncidents(res.data);
         const { data: resp } = await api.get('/responders');
         setResponders(resp);
-      } catch (err) {
+      } catch {
         console.warn("Using mock dashboard data");
       }
     };
@@ -28,13 +28,19 @@ export default function DashboardPage() {
   }, []);
 
   useEffect(() => {
-    if (selectedIncident) {
+    if (!selectedIncident) return;
+    const fetchHospitals = async () => {
       setLoadingHospitals(true);
-      api.get(`/hospitals/nearby?lat=${selectedIncident.lat}&lng=${selectedIncident.lng}`)
-        .then(res => setHospitals(res.data))
-        .catch(() => setHospitals([]))
-        .finally(() => setLoadingHospitals(false));
-    }
+      try {
+        const res = await api.get(`/hospitals/nearby?lat=${selectedIncident.lat}&lng=${selectedIncident.lng}`);
+        setHospitals(res.data);
+      } catch {
+        setHospitals([]);
+      } finally {
+        setLoadingHospitals(false);
+      }
+    };
+    fetchHospitals();
   }, [selectedIncident]);
 
   const handleResolve = async (id) => {
