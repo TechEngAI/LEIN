@@ -10,7 +10,7 @@ const TYPE_META = {
 };
 
 export default function IncidentQueue({ incidents, selectedIncident, setSelectedIncident }) {
-  const [now, setNow] = useState(Date.now());
+  const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
     const timer = setInterval(() => setNow(Date.now()), 60000);

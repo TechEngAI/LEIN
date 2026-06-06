@@ -35,7 +35,7 @@ function MapAnimator() {
   return null;
 }
 
-export default function LEINMap({ incidents, hospitals, responders, setSelectedIncident }) {
+export default function LEINMap({ incidents = [], hospitals = [], responders = [], setSelectedIncident }) {
   return (
     <div style={{ height: '100%', width: '100%', position: 'relative' }}>
       <div style={{ position: 'absolute', top: 16, left: '50%', transform: 'translateX(-50%)', zIndex: 999, background: 'rgba(2,8,23,0.8)', padding: '8px 16px', borderRadius: 24, border: '1px solid rgba(255,255,255,0.1)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: 8, backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
