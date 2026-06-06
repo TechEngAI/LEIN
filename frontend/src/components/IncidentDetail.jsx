@@ -4,7 +4,7 @@ import LoadingSkeleton from './LoadingSkeleton';
 import api from '../services/api';
 import { useState } from 'react';
 
-export default function IncidentDetail({ incident, hospitals, loadingHospitals, onResolve }) {
+export default function IncidentDetail({ incident, hospitals, loadingHospitals, onResolve, responders }) {
   const [assigning, setAssigning] = useState(false);
   const [eta, setEta] = useState(null);
 
@@ -76,6 +76,8 @@ export default function IncidentDetail({ incident, hospitals, loadingHospitals, 
       <div className="detail-actions">
         {eta ? (
           <div className="eta-badge">Responder Assigned! ETA: {eta}</div>
+        ) : responders && !responders.some(r => r.status === 'available') ? (
+          <div className="eta-badge" style={{ background: 'var(--alert-red)' }}>No responders available</div>
         ) : (
           <button className="btn-primary" onClick={handleAssign} disabled={assigning}>
             {assigning ? 'Assigning...' : 'Assign Nearest Responder'}

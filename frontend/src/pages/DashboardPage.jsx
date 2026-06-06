@@ -11,6 +11,8 @@ export default function DashboardPage() {
   const [hospitals, setHospitals] = useState([]);
   const [loadingHospitals, setLoadingHospitals] = useState(false);
   const [responders, setResponders] = useState(mockResponders);
+  const [livePaused, setLivePaused] = useState(false);
+  const [globalError, setGlobalError] = useState(false);
 
   // Poll for incidents
   useEffect(() => {
@@ -18,8 +20,12 @@ export default function DashboardPage() {
       try {
         const res = await api.get('/incidents');
         setIncidents(res.data);
-      } catch {
-        // Keep existing data on fail
+        setLivePaused(false);
+      } catch (err) {
+        setLivePaused(true);
+        if (err.response?.status === 500) {
+          setGlobalError(true);
+        }
       }
     }, 5000);
     return () => clearInterval(poll);
@@ -57,9 +63,16 @@ export default function DashboardPage() {
     }
   };
 
+  if (globalError) {
+    return <div className="dashboard-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <EmptyState message="Service temporarily unavailable" />
+    </div>;
+  }
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-left">
+        {livePaused && <div style={{ color: 'var(--alert-red)', fontSize: '12px', marginBottom: '8px', textAlign: 'center' }}>⚠ Live updates paused</div>}
         <IncidentQueue 
           incidents={incidents.sort((a,b) => b.priority_score - a.priority_score)} 
           selectedIncident={selectedIncident}
@@ -81,6 +94,7 @@ export default function DashboardPage() {
           hospitals={hospitals}
           loadingHospitals={loadingHospitals}
           onResolve={handleResolve}
+          responders={responders}
         />
       </div>
     </div>

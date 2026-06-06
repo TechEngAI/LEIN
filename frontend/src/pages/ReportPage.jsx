@@ -64,9 +64,12 @@ export default function ReportPage() {
     if (!type) newErrors.type = 'Please select an emergency type';
     if (description.length < 10) newErrors.description = 'Description must be at least 10 characters';
     
-    const finalLat = location ? location.lat : manualLat;
-    const finalLng = location ? location.lng : manualLng;
-    if (!finalLat || !finalLng) newErrors.location = 'Location is required';
+    const finalLat = location ? location.lat : parseFloat(manualLat);
+    const finalLng = location ? location.lng : parseFloat(manualLng);
+
+    if (finalLat < 6.2 || finalLat > 6.8 || finalLng < 3.1 || finalLng > 3.7) {
+      newErrors.location = 'Location appears outside Lagos — please verify';
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -99,7 +102,8 @@ export default function ReportPage() {
         type: type,
         confidence: 0.92,
         keywords: ['emergency', 'urgent'],
-        priority_score: 7
+        priority_score: 7,
+        mockFallback: true
       });
     } finally {
       setIsSubmitting(false);
@@ -115,6 +119,11 @@ export default function ReportPage() {
           animate={{ opacity: 1, y: 0 }}
         >
           <div className="success-banner">✓ Report submitted</div>
+          {result.mockFallback && (
+            <div className="error-text" style={{ textAlign: 'center', marginBottom: '16px' }}>
+              AI offline — using fallback classification
+            </div>
+          )}
           <h2>AI Classification</h2>
           <div className="result-stats">
             <div><strong>Type:</strong> {result.type}</div>

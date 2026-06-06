@@ -37,30 +37,35 @@ export default function AnalyticsPage() {
       }
     );
 
-    // Fetch Analytics data
+    const abortController = new AbortController();
+
     const fetchAnalytics = async () => {
       try {
-        const resHeatmap = await api.get('/stats/heatmap');
+        const resHeatmap = await api.get('/stats/heatmap', { signal: abortController.signal });
         setHeatmap(resHeatmap.data);
       } catch {
         // use mock
       }
 
       try {
-        const resForecast = await api.get('/forecast');
+        const resForecast = await api.get('/forecast', { signal: abortController.signal });
         setForecast(resForecast.data);
       } catch {
         // use mock
       }
 
       try {
-        const resIncidents = await api.get('/incidents');
+        const resIncidents = await api.get('/incidents', { signal: abortController.signal });
         setSummaryStats(prev => ({ ...prev, activeCount: resIncidents.data.length }));
       } catch {
         // use mock 12
       }
     };
     fetchAnalytics();
+
+    return () => {
+      abortController.abort();
+    };
   }, []);
 
   // Mock hourly data
