@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap, Circle } from 'react-leaflet';
 import gsap from 'gsap';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -45,6 +45,14 @@ export default function LEINMap({ incidents, hospitals, responders, setSelectedI
       <MapContainer center={[6.5244, 3.3792]} zoom={12} style={{ height: '100%', width: '100%' }} zoomControl={false}>
         <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}{r}.png" attribution='&copy; <a href="https://carto.com/">CARTO</a>' />
         <MapAnimator />
+
+        {/* Prediction Hotspots */}
+        <Circle center={[6.6018, 3.3515]} radius={1500} pathOptions={{ color: 'var(--alert-red)', fillColor: 'var(--alert-red)', fillOpacity: 0.2, stroke: false }}>
+          <Popup>Predicted Hotspot: Ikeja ↑</Popup>
+        </Circle>
+        <Circle center={[6.4698, 3.5852]} radius={2000} pathOptions={{ color: 'var(--alert-red)', fillColor: 'var(--alert-red)', fillOpacity: 0.15, stroke: false }}>
+          <Popup>Predicted Hotspot: Lekki ↑</Popup>
+        </Circle>
 
         {incidents.map(inc => (
           <Marker key={inc.id} position={[inc.lat, inc.lng]} icon={getIncidentIcon(inc.type)} eventHandlers={{ click: () => setSelectedIncident(inc) }}>

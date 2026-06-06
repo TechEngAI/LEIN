@@ -28,7 +28,7 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className={`incident-card ${isSelected ? 'selected' : ''}`}
+              className={`incident-card ${isSelected ? 'selected' : ''} ${isCritical ? 'emergency-mode-card' : ''}`}
               style={{
                 '--severity-color': isCritical ? 'var(--alert-red)' : meta.color,
                 boxShadow: isCritical && isSelected ? '0 0 24px rgba(229,72,77,0.2)' : 'none'
@@ -53,11 +53,17 @@ export default function IncidentQueue({ incidents, selectedIncident, setSelected
                     {incident.priority_score ? incident.priority_score.toFixed(1) : (incident.severity * 2).toFixed(1)}
                   </span>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <div style={{ width: 40, height: 40, position: 'relative' }}>
+                    <svg viewBox="0 0 36 36" style={{ width: '100%', height: '100%', transform: 'rotate(-90deg)' }}>
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="3" />
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--ai-blue)" strokeWidth="3" strokeDasharray={`${Math.round(incident.priority_score ? incident.priority_score * 10 : 94)}, 100`} />
+                    </svg>
+                    <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 800, color: '#fff' }}>
+                      {Math.round(incident.priority_score ? incident.priority_score * 10 : 94)}
+                    </div>
+                  </div>
                   <span style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 700 }}>AI CONFIDENCE</span>
-                  <span style={{ color: 'var(--ai-blue-light)', fontSize: 20, fontWeight: 900 }}>
-                    {incident.priority_score ? Math.round(incident.priority_score * 10) : 94}%
-                  </span>
                 </div>
               </div>
 
