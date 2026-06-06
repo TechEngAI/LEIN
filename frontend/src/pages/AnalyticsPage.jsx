@@ -45,9 +45,31 @@ export default function AnalyticsPage() {
 
     const abortController = new AbortController();
     (async () => {
-      try { const r = await api.get('/stats/heatmap', { signal: abortController.signal }); setHeatmap(r.data); } catch { console.warn("API offline, using mock heatmap"); }
-      try { const r = await api.get('/forecast', { signal: abortController.signal }); setForecast(r.data); } catch { console.warn("API offline, using mock forecast"); }
-      try { const r = await api.get('/incidents', { signal: abortController.signal }); setSummaryStats(p => ({ ...p, activeCount: r.data.length })); } catch { console.warn("API offline, using mock incidents"); }
+      try {
+        const r = await api.get('/stats/heatmap', { signal: abortController.signal });
+        if (r.data && r.data.length > 0) setHeatmap(r.data);
+      } catch {
+        console.warn('[LEIN] Backend offline — using mock data fallback');
+        setHeatmap(mockHeatmap);
+      }
+      try {
+        const r = await api.get('/forecast', { signal: abortController.signal });
+        // Only use API data if it has the correct shape
+        if (r.data && r.data.length > 0 && r.data[0].predicted_incidents !== undefined) {
+          setForecast(r.data);
+        } else {
+          setForecast(mockForecast);
+        }
+      } catch {
+        console.warn('[LEIN] Backend offline — using mock forecast fallback');
+        setForecast(mockForecast);
+      }
+      try {
+        const r = await api.get('/incidents', { signal: abortController.signal });
+        if (r.data && r.data.length > 0) setSummaryStats(p => ({ ...p, activeCount: r.data.length }));
+      } catch {
+        console.warn('[LEIN] Backend offline — using mock incidents fallback');
+      }
     })();
 
     return () => { clearTimeout(timer); abortController.abort(); };
