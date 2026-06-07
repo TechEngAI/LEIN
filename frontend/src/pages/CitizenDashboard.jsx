@@ -16,7 +16,7 @@ export default function CitizenDashboard() {
   const fetchMyIncidents = async () => {
     try {
       const token = getToken();
-      const res = await fetch('https://lein-backend.onrender.com/incidents/my', { headers: { Authorization: `Bearer ${token}` } });
+      const res = await fetch('https://lein-n04y.onrender.com/incidents/my', { headers: { Authorization: `Bearer ${token}` } });
       if (res.ok) {
         const data = await res.json();
         setIncidents(data);
@@ -54,7 +54,7 @@ export default function CitizenDashboard() {
       await new Promise((r) => setTimeout(r, 400));
 
       setLoadingStage('✅ Dispatching...');
-      const res = await fetch('https://lein-backend.onrender.com/incidents', {
+      const res = await fetch('https://lein-n04y.onrender.com/incidents', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({

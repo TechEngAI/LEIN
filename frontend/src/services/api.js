@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken } from './auth';
 
 const api = axios.create({
-  baseURL: 'https://lein-backend.onrender.com',
+  baseURL: 'https://lein-n04y.onrender.com',
   timeout: 4000,
 });
 

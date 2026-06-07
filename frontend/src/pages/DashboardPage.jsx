@@ -47,7 +47,7 @@ export default function DashboardPage() {
   const fetchSuggestion = async (incidentId) => {
     const token = sessionStorage.getItem('access_token');
     try {
-      const res = await fetch(`https://lein-backend.onrender.com/incidents/${incidentId}/suggestion`, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await fetch(`https://lein-n04y.onrender.com/incidents/${incidentId}/suggestion`, { headers: { Authorization: `Bearer ${token}` } });
       const data = await res.json().catch(() => ({}));
       setSuggestion(data);
     } catch (e) {
@@ -59,7 +59,7 @@ export default function DashboardPage() {
     setDispatching(incidentId);
     const token = sessionStorage.getItem('access_token');
     try {
-      const res = await fetch(`https://lein-backend.onrender.com/incidents/${incidentId}/dispatch`, {
+      const res = await fetch(`https://lein-n04y.onrender.com/incidents/${incidentId}/dispatch`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ confirmed_responder_id: responderId })
