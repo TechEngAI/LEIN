@@ -12,6 +12,13 @@ export default function CitizenDashboard() {
   const [coords, setCoords] = useState({ lat: null, lng: null });
   const [loadingStage, setLoadingStage] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const fetchMyIncidents = async () => {
     try {
@@ -113,15 +120,15 @@ export default function CitizenDashboard() {
       </div>
 
       {showModal && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', display: 'grid', placeItems: 'center', zIndex: 60 }}>
-          <div style={{ width: '94%', maxWidth: 600, background: 'var(--bg-panel)', border: '1px solid var(--border-bright)', borderRadius: 12, padding: 20, position: 'relative' }}>
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', display: 'grid', placeItems: isMobile ? 'start' : 'center', alignItems: isMobile ? 'start' : 'center', padding: isMobile ? 12 : 0, zIndex: 60, overflowY: 'auto' }}>
+          <div style={{ width: isMobile ? '100%' : '94%', maxWidth: 640, background: 'var(--bg-panel)', border: '1px solid var(--border-bright)', borderRadius: 12, padding: isMobile ? 16 : 20, position: 'relative', boxSizing: 'border-box', maxHeight: isMobile ? '92vh' : 'auto', overflowY: 'auto' }}>
             <button onClick={() => setShowModal(false)} style={{ position: 'absolute', right: 12, top: 12, border: 'none', background: 'transparent', color: 'var(--text-muted)', fontSize: 18 }}>✕</button>
-            <h3 style={{ marginTop: 6 }}>Lodge Emergency</h3>
-            <p style={{ color: 'var(--text-muted)' }}>Describe your emergency. Our AI will classify and dispatch help immediately.</p>
+            <h3 style={{ marginTop: 6, fontSize: isMobile ? 18 : 20 }}>Lodge Emergency</h3>
+            <p style={{ color: 'var(--text-muted)', marginBottom: 8 }}>Describe your emergency. Our AI will classify and dispatch help immediately.</p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 12 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 10, marginTop: 12 }}>
               {['Medical','Fire','Security','Accident'].map((t) => (
-                <button key={t} onClick={() => setSelectedType(t)} style={{ padding: 14, borderRadius: 8, background: selectedType === t ? 'var(--ai-blue)' : 'var(--bg-card)', color: selectedType === t ? '#fff' : 'var(--text-primary)', fontWeight: 800 }}>
+                <button key={t} onClick={() => setSelectedType(t)} style={{ padding: isMobile ? 12 : 14, borderRadius: 8, background: selectedType === t ? 'var(--ai-blue)' : 'var(--bg-card)', color: selectedType === t ? '#fff' : 'var(--text-primary)', fontWeight: 800, textAlign: 'left' }}>
                   {t}
                 </button>
               ))}
@@ -129,25 +136,25 @@ export default function CitizenDashboard() {
 
             <div style={{ marginTop: 12 }}>
               <div style={{ marginBottom: 8, color: 'var(--text-muted)' }}>Description</div>
-              <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder={"Describe in English or Pidgin... e.g. 'E don faint, e no dey breathe'"} style={{ width: '100%', minHeight: 120, padding: 12, borderRadius: 8, border: '1px solid var(--border-bright)', background: 'transparent', color: 'var(--text-primary)' }} />
+              <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder={"Describe in English or Pidgin... e.g. 'E don faint, e no dey breathe'"} style={{ width: '100%', minHeight: isMobile ? 100 : 120, padding: 12, borderRadius: 8, border: '1px solid var(--border-bright)', background: 'transparent', color: 'var(--text-primary)' }} />
               <div style={{ textAlign: 'right', color: 'var(--text-muted)', fontSize: 12 }}>{description.length} chars</div>
             </div>
 
             <div style={{ marginTop: 12 }}>
               <div style={{ marginBottom: 8, color: 'var(--text-muted)' }}>Location</div>
-              <div style={{ display: 'flex', gap: 8 }}>
+              <div style={{ display: 'flex', gap: 8, flexDirection: isMobile ? 'column' : 'row' }}>
                 <input value={location} onChange={(e)=>setLocation(e.target.value)} placeholder="Enter location or use my location" style={{ flex: 1, padding: 10, borderRadius: 8, border: '1px solid var(--border-bright)', background: 'transparent', color: 'var(--text-primary)' }} />
-                <button onClick={useMyLocation} style={{ padding: '8px 10px', borderRadius: 8, background: 'var(--bg-card)', color: 'var(--text-primary)' }}>📍 Use my location</button>
+                <button onClick={useMyLocation} style={{ padding: isMobile ? '10px' : '8px 10px', borderRadius: 8, background: 'var(--bg-card)', color: 'var(--text-primary)', width: isMobile ? '100%' : 'auto' }}>📍 Use my location</button>
               </div>
             </div>
 
-            <div style={{ marginTop: 12, color: 'var(--text-muted)' }}>
+            <div style={{ marginTop: 12, color: 'var(--text-muted)', fontSize: isMobile ? 13 : 14 }}>
               Reporting as: {user?.full_name || 'anonymous'}<br />
               Contact: {user?.phone || 'not provided'}
             </div>
 
             <div style={{ marginTop: 16 }}>
-              <button onClick={submitIncident} disabled={submitting} style={{ width: '100%', background: '#EF4444', color: '#fff', padding: '12px 16px', borderRadius: 10, fontWeight: 900 }}>
+              <button onClick={submitIncident} disabled={submitting} style={{ width: '100%', background: '#EF4444', color: '#fff', padding: '12px 16px', borderRadius: 10, fontWeight: 900, fontSize: isMobile ? 15 : 16 }}>
                 {submitting ? loadingStage || 'Dispatching...' : 'Dispatch Emergency Response'}
               </button>
             </div>
