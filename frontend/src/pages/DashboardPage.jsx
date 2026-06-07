@@ -33,6 +33,7 @@ export default function DashboardPage() {
   const [hospitals, setHospitals] = useState([]);
   const [selectedIncident, setSelectedIncident] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [backendWaking, setBackendWaking] = useState(false);
   const [dispatching, setDispatching] = useState(null);
   const [suggestion, setSuggestion] = useState(null);
   const [showDispatchModal, setShowDispatchModal] = useState(false);
@@ -93,12 +94,17 @@ export default function DashboardPage() {
   useEffect(() => {
     let active = true;
     const fetchData = async () => {
+      const timer = setTimeout(() => {
+        setBackendWaking(true)
+      }, 4000)
       try {
         const [incRes, respRes, hospRes] = await Promise.all([
           api.get('/incidents').catch(() => ({ data: [] })),
           api.get('/responders').catch(() => ({ data: [] })),
           api.get('/hospitals').catch(() => ({ data: [] }))
         ]);
+        clearTimeout(timer)
+        setBackendWaking(false)
         
         if (!active) return;
 
@@ -118,6 +124,8 @@ export default function DashboardPage() {
         
         if (finalIncidents.length > 0) setSelectedIncident(finalIncidents[0]);
       } catch {
+        clearTimeout(timer)
+        setBackendWaking(false)
         if (active) {
           setIncidents(MOCK_INCIDENTS);
           setResponders(MOCK_RESPONDERS);
@@ -192,6 +200,30 @@ export default function DashboardPage() {
           <div className="kpi-card-value" style={{ color: 'var(--safe-green)', fontSize: 24, marginTop: 8 }}>OPERATIONAL</div>
         </div>
       </div>
+
+      {backendWaking && (
+        <div style={{
+          background: 'rgba(245,158,11,0.1)',
+          border: '1px solid rgba(245,158,11,0.3)',
+          borderRadius: '8px',
+          padding: '12px 20px',
+          margin: '0 24px 16px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px',
+          fontSize: '14px',
+          color: '#F59E0B',
+          fontWeight: '600'
+        }}>
+          <span style={{
+            display: 'inline-block',
+            animation: 'spin 1s linear infinite'
+          }}>⟳</span>
+          Waking up backend server —
+          this takes ~30 seconds on
+          first load. Please wait...
+        </div>
+      )}
 
       {/* HERO MAP SECTION (70vh centerpiece) */}
       <motion.div 
