@@ -2,6 +2,12 @@ import math
 from typing import Dict, List
 
 HEAVY_TRAFFIC_LGAS = {'Ikeja', 'Lekki', 'Lagos Island'}
+TYPE_TO_RESPONDER = {
+    'Medical': 'Ambulance',
+    'Fire': 'Fire Truck',
+    'Security': 'Police',
+    'Accident': 'Ambulance',
+}
 
 
 def calculate_haversine(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -16,10 +22,21 @@ def calculate_haversine(lat1: float, lon1: float, lat2: float, lon2: float) -> f
     return 6371.0 * c
 
 
-def optimize_routing(incident_lat: float, incident_lng: float, responders: List[Dict], hour_of_day: int, lga: str) -> Dict:
+def optimize_routing(
+    incident_lat: float,
+    incident_lng: float,
+    responders: List[Dict],
+    hour_of_day: int,
+    lga: str,
+    incident_type: str = 'Medical',
+) -> Dict:
     available = [res for res in responders if res.get('status') == 'available']
     if not available:
         return {'error': 'No available responders', 'recommended_unit': None, 'eta_minutes': None}
+
+    preferred_type = TYPE_TO_RESPONDER.get(incident_type, 'Ambulance')
+    typed = [res for res in available if res.get('type') == preferred_type]
+    pool = typed if typed else available
 
     traffic_multiplier = 1.0
     if hour_of_day in range(6, 10) or hour_of_day in range(16, 21):
@@ -29,7 +46,7 @@ def optimize_routing(incident_lat: float, incident_lng: float, responders: List[
     best_score = None
     best_responder = None
     best_distance = 0.0
-    for responder in available:
+    for responder in pool:
         distance = calculate_haversine(incident_lat, incident_lng, float(responder.get('lat', 0.0)), float(responder.get('lng', 0.0)))
         capacity_weight = float(responder.get('capacity_weight', 1.0)) if responder.get('capacity_weight') is not None else 1.0
         if capacity_weight <= 0:

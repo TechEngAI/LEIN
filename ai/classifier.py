@@ -58,7 +58,11 @@ class ClassifierFallback:
         if MODEL_PATH.exists():
             self.model = load(MODEL_PATH)
             return
-        self._train()
+        try:
+            self._train()
+        except Exception as e:
+            print(f"TF-IDF classifier training failed: {e}")
+            self.model = None
 
     def _train(self):
         if not TRAINING_CSV.exists():
@@ -79,9 +83,13 @@ class ClassifierFallback:
         probability = 0.0
         label = 'Medical'
         if self.model is not None:
-            label = self.model.predict([text])[0]
-            probs = self.model.predict_proba([text])[0]
-            probability = float(probs.max())
+            try:
+                label = self.model.predict([text])[0]
+                probs = self.model.predict_proba([text])[0]
+                probability = float(probs.max())
+            except Exception as e:
+                print(f"TF-IDF classification failed: {e}")
+                label = _choose_fallback_label(text)
         if label not in CATEGORIES:
             label = _choose_fallback_label(text)
         keywords = extract_keywords(text)

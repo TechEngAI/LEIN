@@ -1,0 +1,621 @@
+description,incident_type,hour_of_day,day_of_week,lga,citizen_severity_hint,keyword_flags
+Electric pole catch fire near Ajah junction,Fire,0,0,Ajah,2,1
+Boys dey break enter compound with cutlass for Festac,Security,7,6,Festac,3,0
+Fire don start for apartment block for Lagos Island,Fire,23,5,Lagos Island,2,1
+House for Ikorodu dey burn with flame and people dey run smoke everywhere,Fire,14,3,Ikorodu,2,1
+Accident happen for expressway near Agege with many injured,Accident,9,2,Agege,2,1
+Pileup accident just happen for Ajah bridge,Accident,8,1,Ajah,2,1
+Patient no dey breathe after accident for Lagos Island,Medical,7,2,Lagos Island,2,1
+Electric pole catch fire near Alimosho junction,Fire,22,4,Alimosho,3,1
+Boys dey break enter compound with cutlass for Surulere,Security,19,1,Surulere,3,0
+Fight and attack dey happen for Festac street,Security,14,1,Festac,2,1
+Boys dey break enter compound with cutlass for Ikeja boys don dey there,Security,19,5,Ikeja,3,0
+Person don faint for road for Lekki person still no fit wake,Medical,16,6,Lekki,3,1
+House for Ajah dey burn with flame and people dey run,Fire,6,1,Ajah,4,1
+Boys dey break enter compound with cutlass for Ikorodu boys don dey there,Security,17,2,Ikorodu,4,0
+Patient no dey breathe after accident for Lagos Island,Medical,13,1,Lagos Island,4,1
+Fight and attack dey happen for Yaba street boys don dey there,Security,19,5,Yaba,2,1
+Heavy smoke dey come out from market for Surulere smoke everywhere,Fire,19,2,Surulere,3,1
+Vehicle don crash for Festac road and traffic don jam,Accident,8,5,Festac,2,1
+Person don faint for road for Lagos Island,Medical,20,4,Lagos Island,3,1
+Patient no dey breathe after accident for Festac person still no fit wake,Medical,5,6,Festac,2,2
+Thief don use gun dey rob people for Ajah boys don dey there,Security,1,1,Ajah,4,1
+Patient no dey breathe after accident for Surulere,Medical,5,4,Surulere,3,1
+Motorcycle hit pedestrian for Ajah during morning rush,Accident,9,0,Ajah,2,0
+Thief don use gun dey rob people for Agege,Security,3,4,Agege,3,1
+Patient no dey breathe after accident for Alimosho,Medical,15,3,Alimosho,3,1
+Boys dey break enter compound with cutlass for Festac,Security,14,3,Festac,3,0
+Fight and attack dey happen for Ajah street,Security,21,2,Ajah,4,1
+Fire don start for apartment block for Festac,Fire,17,5,Festac,5,1
+Person don faint for road for Agege,Medical,10,1,Agege,2,1
+Vehicle don crash for Ikorodu road and traffic don jam,Accident,19,2,Ikorodu,2,1
+Accident happen for expressway near Ikorodu with many injured,Accident,9,5,Ikorodu,4,1
+House for Yaba dey burn with flame and people dey run,Fire,6,6,Yaba,5,1
+Patient no dey breathe after accident for Ikorodu,Medical,1,4,Ikorodu,3,1
+Person don faint for road for Lagos Island person still no fit wake,Medical,3,6,Lagos Island,2,1
+Person don faint for road for Agege,Medical,1,0,Agege,4,1
+Thief don use gun dey rob people for Ikeja,Security,10,2,Ikeja,4,1
+Person don faint for road for Lagos Island,Medical,11,6,Lagos Island,4,1
+Patient no dey breathe after accident for Ikorodu person still no fit wake,Medical,0,1,Ikorodu,5,2
+Pileup accident just happen for Alimosho bridge,Accident,8,0,Alimosho,3,1
+Pileup accident just happen for Ikorodu bridge,Accident,17,0,Ikorodu,2,1
+Thief don use gun dey rob people for Lagos Island boys don dey there,Security,9,6,Lagos Island,1,1
+House owners dey complain say em intruder don enter for Surulere,Security,20,2,Surulere,3,0
+Patient no dey breathe after accident for Ikeja person still no fit wake,Medical,12,3,Ikeja,4,2
+Accident happen for expressway near Festac with many injured,Accident,16,4,Festac,3,1
+Electric pole catch fire near Ikeja junction,Fire,2,4,Ikeja,2,1
+Injured man dey bleed for Ajah bus stop person still no fit wake,Medical,7,1,Ajah,3,2
+House owners dey complain say em intruder don enter for Ikeja,Security,5,4,Ikeja,2,0
+Person don faint for road for Agege person still no fit wake,Medical,23,5,Agege,4,1
+Thief don use gun dey rob people for Festac,Security,23,6,Festac,3,1
+Injured man dey bleed for Ikorodu bus stop,Medical,9,3,Ikorodu,5,1
+Thief don use gun dey rob people for Ikeja,Security,21,2,Ikeja,4,1
+Injured man dey bleed for Agege bus stop,Medical,10,4,Agege,2,1
+Boys dey break enter compound with cutlass for Alimosho,Security,3,4,Alimosho,3,0
+Vehicle don crash for Yaba road and traffic don jam,Accident,20,4,Yaba,4,1
+Patient no dey breathe after accident for Agege person still no fit wake,Medical,1,3,Agege,3,2
+Fight and attack dey happen for Yaba street,Security,3,0,Yaba,3,1
+Injured man dey bleed for Agege bus stop,Medical,21,0,Agege,2,1
+Accident happen for expressway near Alimosho with many injured,Accident,17,5,Alimosho,2,1
+Heavy smoke dey come out from market for Agege,Fire,19,4,Agege,5,1
+Person don faint for road for Surulere,Medical,21,4,Surulere,5,1
+House owners dey complain say em intruder don enter for Agege,Security,9,0,Agege,4,0
+Injured man dey bleed for Ajah bus stop person still no fit wake,Medical,2,1,Ajah,2,2
+Motorcycle hit pedestrian for Alimosho during morning rush,Accident,9,3,Alimosho,3,0
+Injured man dey bleed for Yaba bus stop,Medical,12,5,Yaba,3,1
+House owners dey complain say em intruder don enter for Agege,Security,3,1,Agege,2,0
+Fight and attack dey happen for Agege street,Security,4,2,Agege,5,1
+Injured man dey bleed for Lekki bus stop person still no fit wake,Medical,2,2,Lekki,4,2
+House owners dey complain say em intruder don enter for Lekki,Security,11,0,Lekki,2,0
+Patient no dey breathe after accident for Yaba person still no fit wake,Medical,11,0,Yaba,3,2
+Pileup accident just happen for Alimosho bridge,Accident,18,5,Alimosho,1,1
+Injured man dey bleed for Yaba bus stop,Medical,0,5,Yaba,1,1
+Thief don use gun dey rob people for Ikeja,Security,1,4,Ikeja,3,1
+Accident happen for expressway near Ikorodu with many injured,Accident,19,1,Ikorodu,2,1
+Boys dey break enter compound with cutlass for Ajah,Security,2,4,Ajah,2,0
+Injured man dey bleed for Yaba bus stop,Medical,14,4,Yaba,5,1
+House owners dey complain say em intruder don enter for Ikeja,Security,0,1,Ikeja,2,0
+Motorcycle hit pedestrian for Festac during morning rush,Accident,9,4,Festac,2,0
+Person don faint for road for Agege,Medical,5,4,Agege,2,1
+Patient no dey breathe after accident for Ikeja,Medical,1,6,Ikeja,4,1
+Vehicle don crash for Ikorodu road and traffic don jam,Accident,6,6,Ikorodu,4,1
+Fight and attack dey happen for Festac street,Security,17,5,Festac,3,1
+Accident happen for expressway near Ajah with many injured,Accident,9,1,Ajah,5,1
+Fight and attack dey happen for Ikeja street,Security,20,1,Ikeja,1,1
+Patient no dey breathe after accident for Ajah,Medical,19,1,Ajah,1,1
+Thief don use gun dey rob people for Alimosho boys don dey there,Security,1,3,Alimosho,2,1
+Fire don start for apartment block for Ikorodu,Fire,20,4,Ikorodu,5,1
+Fire don start for apartment block for Agege,Fire,6,1,Agege,3,1
+House for Ajah dey burn with flame and people dey run,Fire,1,2,Ajah,4,1
+One person dey vomit and no fit wake inside Lekki,Medical,16,4,Lekki,2,1
+Fire don start for apartment block for Ikeja,Fire,8,6,Ikeja,3,1
+Fire don start for apartment block for Festac smoke everywhere,Fire,16,6,Festac,5,1
+Motorcycle hit pedestrian for Lekki during morning rush,Accident,9,3,Lekki,3,0
+Fight and attack dey happen for Ikorodu street,Security,17,4,Ikorodu,3,1
+Boys dey break enter compound with cutlass for Festac,Security,0,2,Festac,3,0
+Patient no dey breathe after accident for Lagos Island,Medical,0,2,Lagos Island,1,1
+House owners dey complain say em intruder don enter for Ikorodu boys don dey there,Security,23,6,Ikorodu,3,0
+Heavy smoke dey come out from market for Alimosho,Fire,15,4,Alimosho,3,1
+Injured man dey bleed for Alimosho bus stop,Medical,22,6,Alimosho,4,1
+Person don faint for road for Ikeja person still no fit wake,Medical,3,0,Ikeja,5,1
+Pileup accident just happen for Ikeja bridge,Accident,8,4,Ikeja,1,1
+Boys dey break enter compound with cutlass for Festac boys don dey there,Security,7,5,Festac,4,0
+Person don faint for road for Lagos Island person still no fit wake,Medical,5,6,Lagos Island,2,1
+Accident happen for expressway near Agege with many injured,Accident,8,2,Agege,3,1
+Person don faint for road for Agege,Medical,18,4,Agege,3,1
+Thief don use gun dey rob people for Alimosho,Security,4,6,Alimosho,3,1
+Boys dey break enter compound with cutlass for Ikeja,Security,20,0,Ikeja,3,0
+One person dey vomit and no fit wake inside Lekki person still no fit wake,Medical,12,5,Lekki,3,1
+Injured man dey bleed for Ikeja bus stop person still no fit wake,Medical,6,6,Ikeja,3,2
+Boys dey break enter compound with cutlass for Lekki boys don dey there,Security,10,3,Lekki,1,0
+Fire don start for apartment block for Ikorodu,Fire,9,3,Ikorodu,3,1
+Heavy smoke dey come out from market for Agege,Fire,1,2,Agege,1,1
+Thief don use gun dey rob people for Surulere,Security,8,3,Surulere,2,1
+Patient no dey breathe after accident for Festac,Medical,15,3,Festac,4,1
+Thief don use gun dey rob people for Ikeja,Security,17,4,Ikeja,3,1
+House owners dey complain say em intruder don enter for Festac boys don dey there,Security,4,5,Festac,4,0
+One person dey vomit and no fit wake inside Ikeja,Medical,16,1,Ikeja,4,1
+Vehicle don crash for Agege road and traffic don jam,Accident,6,4,Agege,5,1
+Injured man dey bleed for Ikorodu bus stop,Medical,1,1,Ikorodu,3,1
+Person don faint for road for Agege,Medical,11,4,Agege,2,1
+Fight and attack dey happen for Lagos Island street boys don dey there,Security,21,1,Lagos Island,2,1
+Person don faint for road for Lagos Island,Medical,3,5,Lagos Island,2,1
+Patient no dey breathe after accident for Yaba,Medical,19,5,Yaba,2,1
+Vehicle don crash for Festac road and traffic don jam,Accident,20,4,Festac,2,1
+Person don faint for road for Alimosho person still no fit wake,Medical,7,4,Alimosho,3,1
+Motorcycle hit pedestrian for Ajah during morning rush,Accident,16,6,Ajah,2,0
+House for Yaba dey burn with flame and people dey run,Fire,4,3,Yaba,4,1
+Fire don start for apartment block for Ajah,Fire,15,3,Ajah,3,1
+Accident happen for expressway near Ikeja with many injured,Accident,8,5,Ikeja,4,1
+Heavy smoke dey come out from market for Ikorodu,Fire,11,3,Ikorodu,2,1
+Patient no dey breathe after accident for Ikorodu,Medical,11,4,Ikorodu,3,1
+Accident happen for expressway near Ikeja with many injured,Accident,19,1,Ikeja,3,1
+Heavy smoke dey come out from market for Festac,Fire,8,1,Festac,3,1
+One person dey vomit and no fit wake inside Yaba person still no fit wake,Medical,21,1,Yaba,2,1
+Electric pole catch fire near Festac junction smoke everywhere,Fire,6,3,Festac,3,1
+Fight and attack dey happen for Lagos Island street boys don dey there,Security,20,3,Lagos Island,3,1
+Pileup accident just happen for Alimosho bridge,Accident,19,3,Alimosho,3,1
+Motorcycle hit pedestrian for Ajah during morning rush,Accident,6,3,Ajah,4,0
+One person dey vomit and no fit wake inside Ikeja,Medical,0,4,Ikeja,1,1
+Person don faint for road for Ajah,Medical,10,1,Ajah,3,1
+House owners dey complain say em intruder don enter for Lagos Island,Security,17,6,Lagos Island,2,0
+Fight and attack dey happen for Festac street,Security,5,6,Festac,3,1
+Boys dey break enter compound with cutlass for Surulere,Security,23,2,Surulere,3,0
+One person dey vomit and no fit wake inside Lekki,Medical,17,1,Lekki,1,1
+Pileup accident just happen for Ajah bridge,Accident,17,6,Ajah,2,1
+House owners dey complain say em intruder don enter for Ikeja,Security,15,0,Ikeja,3,0
+Thief don use gun dey rob people for Lekki,Security,18,2,Lekki,3,1
+Thief don use gun dey rob people for Ikorodu,Security,14,1,Ikorodu,3,1
+Electric pole catch fire near Lekki junction,Fire,10,0,Lekki,2,1
+Person don faint for road for Ikorodu person still no fit wake,Medical,1,1,Ikorodu,2,1
+Fight and attack dey happen for Ajah street,Security,1,4,Ajah,2,1
+Person don faint for road for Alimosho,Medical,4,6,Alimosho,5,1
+Injured man dey bleed for Lekki bus stop person still no fit wake,Medical,10,2,Lekki,4,2
+Person don faint for road for Ikeja,Medical,14,5,Ikeja,5,1
+Boys dey break enter compound with cutlass for Ajah boys don dey there,Security,9,6,Ajah,2,0
+Patient no dey breathe after accident for Ikorodu person still no fit wake,Medical,16,6,Ikorodu,2,2
+House for Surulere dey burn with flame and people dey run,Fire,6,2,Surulere,3,1
+Vehicle don crash for Lagos Island road and traffic don jam,Accident,8,3,Lagos Island,1,1
+Motorcycle hit pedestrian for Yaba during morning rush,Accident,8,1,Yaba,2,0
+Patient no dey breathe after accident for Ikorodu,Medical,8,4,Ikorodu,2,1
+One person dey vomit and no fit wake inside Ikeja,Medical,12,3,Ikeja,4,1
+Vehicle don crash for Surulere road and traffic don jam,Accident,19,5,Surulere,4,1
+Vehicle don crash for Festac road and traffic don jam,Accident,20,6,Festac,1,1
+Thief don use gun dey rob people for Ikorodu,Security,7,0,Ikorodu,4,1
+House owners dey complain say em intruder don enter for Ikeja,Security,5,2,Ikeja,2,0
+Person don faint for road for Agege,Medical,7,2,Agege,2,1
+Vehicle don crash for Ajah road and traffic don jam,Accident,8,3,Ajah,4,1
+Boys dey break enter compound with cutlass for Ajah,Security,21,4,Ajah,3,0
+Boys dey break enter compound with cutlass for Ikorodu,Security,12,0,Ikorodu,1,0
+Fight and attack dey happen for Ikeja street boys don dey there,Security,2,1,Ikeja,2,1
+Injured man dey bleed for Agege bus stop,Medical,18,6,Agege,3,1
+Pileup accident just happen for Festac bridge,Accident,6,1,Festac,2,1
+House for Surulere dey burn with flame and people dey run smoke everywhere,Fire,13,0,Surulere,4,1
+House owners dey complain say em intruder don enter for Lekki boys don dey there,Security,6,2,Lekki,3,0
+Electric pole catch fire near Ajah junction,Fire,15,1,Ajah,3,1
+House owners dey complain say em intruder don enter for Surulere boys don dey there,Security,5,3,Surulere,1,0
+Person don faint for road for Ikorodu,Medical,4,1,Ikorodu,3,1
+Vehicle don crash for Lagos Island road and traffic don jam,Accident,8,5,Lagos Island,3,1
+Electric pole catch fire near Ikeja junction smoke everywhere,Fire,9,3,Ikeja,2,1
+Thief don use gun dey rob people for Lekki boys don dey there,Security,1,6,Lekki,3,1
+Motorcycle hit pedestrian for Ikeja during morning rush,Accident,17,6,Ikeja,3,0
+Electric pole catch fire near Yaba junction smoke everywhere,Fire,22,3,Yaba,3,1
+One person dey vomit and no fit wake inside Alimosho person still no fit wake,Medical,22,2,Alimosho,2,1
+Fire don start for apartment block for Agege,Fire,10,1,Agege,3,1
+Pileup accident just happen for Ikorodu bridge,Accident,17,4,Ikorodu,3,1
+Boys dey break enter compound with cutlass for Alimosho,Security,8,3,Alimosho,3,0
+Thief don use gun dey rob people for Ikeja,Security,1,5,Ikeja,5,1
+Heavy smoke dey come out from market for Lagos Island,Fire,20,0,Lagos Island,2,1
+Pileup accident just happen for Alimosho bridge,Accident,9,4,Alimosho,3,1
+House for Festac dey burn with flame and people dey run smoke everywhere,Fire,8,3,Festac,4,1
+Person don faint for road for Alimosho,Medical,18,4,Alimosho,3,1
+Person don faint for road for Lekki,Medical,15,1,Lekki,3,1
+House owners dey complain say em intruder don enter for Ajah boys don dey there,Security,7,2,Ajah,3,0
+Boys dey break enter compound with cutlass for Lekki,Security,16,1,Lekki,1,0
+One person dey vomit and no fit wake inside Ikorodu,Medical,19,2,Ikorodu,5,1
+House owners dey complain say em intruder don enter for Agege boys don dey there,Security,12,6,Agege,1,0
+Heavy smoke dey come out from market for Lekki smoke everywhere,Fire,15,6,Lekki,4,1
+Fight and attack dey happen for Festac street,Security,19,0,Festac,2,1
+Person don faint for road for Lekki person still no fit wake,Medical,12,6,Lekki,4,1
+Vehicle don crash for Alimosho road and traffic don jam,Accident,8,5,Alimosho,5,1
+House owners dey complain say em intruder don enter for Ikeja boys don dey there,Security,2,2,Ikeja,2,0
+Fire don start for apartment block for Agege,Fire,13,4,Agege,3,1
+Heavy smoke dey come out from market for Surulere smoke everywhere,Fire,9,3,Surulere,4,1
+Vehicle don crash for Alimosho road and traffic don jam,Accident,6,1,Alimosho,5,1
+One person dey vomit and no fit wake inside Ajah,Medical,8,1,Ajah,5,1
+Electric pole catch fire near Alimosho junction smoke everywhere,Fire,22,5,Alimosho,1,1
+Vehicle don crash for Lagos Island road and traffic don jam,Accident,6,2,Lagos Island,3,1
+Injured man dey bleed for Lagos Island bus stop,Medical,18,0,Lagos Island,4,1
+Vehicle don crash for Alimosho road and traffic don jam,Accident,17,1,Alimosho,3,1
+Vehicle don crash for Festac road and traffic don jam,Accident,8,1,Festac,3,1
+Pileup accident just happen for Alimosho bridge,Accident,8,2,Alimosho,2,1
+Fight and attack dey happen for Ikeja street,Security,6,4,Ikeja,3,1
+Injured man dey bleed for Agege bus stop person still no fit wake,Medical,2,2,Agege,3,2
+Thief don use gun dey rob people for Surulere,Security,10,5,Surulere,3,1
+Person don faint for road for Surulere,Medical,7,3,Surulere,3,1
+Boys dey break enter compound with cutlass for Ikorodu,Security,2,2,Ikorodu,2,0
+Person don faint for road for Yaba,Medical,4,5,Yaba,1,1
+House owners dey complain say em intruder don enter for Lagos Island boys don dey there,Security,11,0,Lagos Island,4,0
+Accident happen for expressway near Ajah with many injured,Accident,9,6,Ajah,4,1
+Patient no dey breathe after accident for Lekki,Medical,9,1,Lekki,2,1
+Motorcycle hit pedestrian for Yaba during morning rush,Accident,18,2,Yaba,3,0
+Injured man dey bleed for Festac bus stop,Medical,10,6,Festac,4,1
+Pileup accident just happen for Yaba bridge,Accident,19,3,Yaba,3,1
+Accident happen for expressway near Agege with many injured,Accident,18,2,Agege,4,1
+House for Surulere dey burn with flame and people dey run,Fire,19,4,Surulere,3,1
+Vehicle don crash for Agege road and traffic don jam,Accident,19,2,Agege,5,1
+One person dey vomit and no fit wake inside Ajah person still no fit wake,Medical,15,4,Ajah,5,1
+One person dey vomit and no fit wake inside Agege,Medical,9,3,Agege,4,1
+House owners dey complain say em intruder don enter for Agege,Security,6,5,Agege,4,0
+Accident happen for expressway near Surulere with many injured,Accident,8,4,Surulere,5,1
+One person dey vomit and no fit wake inside Lekki,Medical,11,2,Lekki,3,1
+Injured man dey bleed for Alimosho bus stop person still no fit wake,Medical,22,0,Alimosho,4,2
+Accident happen for expressway near Ajah with many injured,Accident,8,0,Ajah,2,1
+Thief don use gun dey rob people for Ikorodu,Security,14,3,Ikorodu,3,1
+Fire don start for apartment block for Alimosho,Fire,1,3,Alimosho,3,1
+Person don faint for road for Ikorodu,Medical,21,5,Ikorodu,4,1
+Thief don use gun dey rob people for Ajah,Security,0,4,Ajah,5,1
+One person dey vomit and no fit wake inside Lekki,Medical,1,3,Lekki,5,1
+House owners dey complain say em intruder don enter for Ikeja,Security,18,6,Ikeja,3,0
+Injured man dey bleed for Ikorodu bus stop,Medical,4,0,Ikorodu,3,1
+One person dey vomit and no fit wake inside Lagos Island,Medical,6,4,Lagos Island,2,1
+House owners dey complain say em intruder don enter for Ajah,Security,17,6,Ajah,2,0
+Thief don use gun dey rob people for Ikorodu,Security,10,0,Ikorodu,3,1
+One person dey vomit and no fit wake inside Ikorodu,Medical,19,2,Ikorodu,2,1
+Injured man dey bleed for Lagos Island bus stop,Medical,13,3,Lagos Island,3,1
+Vehicle don crash for Surulere road and traffic don jam,Accident,17,3,Surulere,3,1
+Heavy smoke dey come out from market for Lekki,Fire,10,2,Lekki,4,1
+Injured man dey bleed for Agege bus stop,Medical,1,2,Agege,2,1
+Boys dey break enter compound with cutlass for Agege,Security,8,0,Agege,5,0
+House for Ajah dey burn with flame and people dey run smoke everywhere,Fire,15,5,Ajah,4,1
+Fight and attack dey happen for Ikeja street boys don dey there,Security,14,1,Ikeja,1,1
+Injured man dey bleed for Ajah bus stop person still no fit wake,Medical,14,0,Ajah,3,2
+House owners dey complain say em intruder don enter for Alimosho,Security,0,5,Alimosho,2,0
+Heavy smoke dey come out from market for Alimosho smoke everywhere,Fire,0,6,Alimosho,3,1
+House for Surulere dey burn with flame and people dey run,Fire,7,2,Surulere,3,1
+Motorcycle hit pedestrian for Lagos Island during morning rush,Accident,9,6,Lagos Island,3,0
+Fight and attack dey happen for Ajah street,Security,17,0,Ajah,3,1
+Heavy smoke dey come out from market for Ajah,Fire,6,5,Ajah,3,1
+Heavy smoke dey come out from market for Yaba,Fire,1,3,Yaba,4,1
+Accident happen for expressway near Surulere with many injured,Accident,8,2,Surulere,3,1
+Injured man dey bleed for Agege bus stop person still no fit wake,Medical,23,5,Agege,4,2
+Thief don use gun dey rob people for Lagos Island boys don dey there,Security,14,3,Lagos Island,4,1
+Electric pole catch fire near Lekki junction smoke everywhere,Fire,8,4,Lekki,4,1
+Injured man dey bleed for Alimosho bus stop person still no fit wake,Medical,4,3,Alimosho,4,2
+Pileup accident just happen for Lagos Island bridge,Accident,19,4,Lagos Island,4,1
+Injured man dey bleed for Ikorodu bus stop person still no fit wake,Medical,15,4,Ikorodu,2,2
+Heavy smoke dey come out from market for Yaba,Fire,8,4,Yaba,3,1
+One person dey vomit and no fit wake inside Yaba,Medical,3,2,Yaba,4,1
+Person don faint for road for Lagos Island,Medical,1,3,Lagos Island,2,1
+Person don faint for road for Agege,Medical,19,1,Agege,3,1
+House owners dey complain say em intruder don enter for Festac boys don dey there,Security,9,1,Festac,3,0
+House owners dey complain say em intruder don enter for Festac,Security,23,0,Festac,3,0
+Injured man dey bleed for Lagos Island bus stop person still no fit wake,Medical,19,3,Lagos Island,4,2
+Boys dey break enter compound with cutlass for Yaba,Security,19,6,Yaba,4,0
+Boys dey break enter compound with cutlass for Ikeja boys don dey there,Security,15,0,Ikeja,4,0
+Accident happen for expressway near Ikeja with many injured,Accident,7,2,Ikeja,3,1
+Fight and attack dey happen for Ajah street,Security,8,2,Ajah,4,1
+Patient no dey breathe after accident for Yaba person still no fit wake,Medical,0,4,Yaba,4,2
+Boys dey break enter compound with cutlass for Agege,Security,19,3,Agege,2,0
+One person dey vomit and no fit wake inside Ikeja person still no fit wake,Medical,14,4,Ikeja,3,1
+Fight and attack dey happen for Ikorodu street boys don dey there,Security,2,4,Ikorodu,2,1
+House owners dey complain say em intruder don enter for Lekki,Security,18,3,Lekki,3,0
+Electric pole catch fire near Lagos Island junction,Fire,13,4,Lagos Island,2,1
+Patient no dey breathe after accident for Yaba,Medical,8,1,Yaba,3,1
+Thief don use gun dey rob people for Surulere,Security,10,2,Surulere,4,1
+Injured man dey bleed for Ajah bus stop person still no fit wake,Medical,12,2,Ajah,2,2
+Injured man dey bleed for Agege bus stop,Medical,12,4,Agege,2,1
+Fire don start for apartment block for Alimosho,Fire,3,4,Alimosho,3,1
+Heavy smoke dey come out from market for Alimosho,Fire,23,0,Alimosho,4,1
+House owners dey complain say em intruder don enter for Festac boys don dey there,Security,2,6,Festac,3,0
+Pileup accident just happen for Yaba bridge,Accident,19,3,Yaba,3,1
+Injured man dey bleed for Alimosho bus stop,Medical,21,6,Alimosho,2,1
+House for Ajah dey burn with flame and people dey run,Fire,17,0,Ajah,3,1
+Vehicle don crash for Lagos Island road and traffic don jam,Accident,8,2,Lagos Island,5,1
+Accident happen for expressway near Ajah with many injured,Accident,18,4,Ajah,3,1
+Boys dey break enter compound with cutlass for Agege,Security,6,6,Agege,3,0
+Pileup accident just happen for Festac bridge,Accident,7,5,Festac,4,1
+Thief don use gun dey rob people for Lagos Island,Security,19,5,Lagos Island,2,1
+One person dey vomit and no fit wake inside Alimosho,Medical,3,6,Alimosho,4,1
+Motorcycle hit pedestrian for Alimosho during morning rush,Accident,6,2,Alimosho,3,0
+Motorcycle hit pedestrian for Lekki during morning rush,Accident,7,2,Lekki,2,0
+Injured man dey bleed for Ajah bus stop person still no fit wake,Medical,3,6,Ajah,4,2
+Person don faint for road for Ikeja,Medical,6,0,Ikeja,3,1
+Fight and attack dey happen for Ikeja street,Security,20,5,Ikeja,2,1
+One person dey vomit and no fit wake inside Ikorodu,Medical,20,5,Ikorodu,1,1
+Patient no dey breathe after accident for Lekki,Medical,21,2,Lekki,3,1
+House owners dey complain say em intruder don enter for Agege boys don dey there,Security,20,3,Agege,1,0
+One person dey vomit and no fit wake inside Ajah person still no fit wake,Medical,20,5,Ajah,4,1
+Patient no dey breathe after accident for Surulere,Medical,16,4,Surulere,3,1
+Patient no dey breathe after accident for Lagos Island person still no fit wake,Medical,3,1,Lagos Island,3,2
+Patient no dey breathe after accident for Surulere person still no fit wake,Medical,21,1,Surulere,3,2
+Boys dey break enter compound with cutlass for Agege,Security,12,0,Agege,1,0
+Pileup accident just happen for Ikeja bridge,Accident,9,0,Ikeja,3,1
+Injured man dey bleed for Ikeja bus stop,Medical,6,2,Ikeja,2,1
+Accident happen for expressway near Ikeja with many injured,Accident,18,6,Ikeja,2,1
+One person dey vomit and no fit wake inside Ikeja person still no fit wake,Medical,5,6,Ikeja,2,1
+Patient no dey breathe after accident for Surulere person still no fit wake,Medical,23,5,Surulere,4,2
+House owners dey complain say em intruder don enter for Ikorodu boys don dey there,Security,4,3,Ikorodu,3,0
+Vehicle don crash for Ikeja road and traffic don jam,Accident,17,1,Ikeja,4,1
+House owners dey complain say em intruder don enter for Agege,Security,15,6,Agege,2,0
+One person dey vomit and no fit wake inside Ikorodu person still no fit wake,Medical,12,4,Ikorodu,4,1
+Heavy smoke dey come out from market for Ajah,Fire,14,5,Ajah,1,1
+Electric pole catch fire near Lekki junction smoke everywhere,Fire,9,2,Lekki,3,1
+Thief don use gun dey rob people for Ajah,Security,21,4,Ajah,4,1
+Heavy smoke dey come out from market for Ajah smoke everywhere,Fire,19,2,Ajah,5,1
+Fire don start for apartment block for Ikorodu,Fire,20,4,Ikorodu,3,1
+Vehicle don crash for Lekki road and traffic don jam,Accident,16,1,Lekki,5,1
+House owners dey complain say em intruder don enter for Alimosho,Security,6,1,Alimosho,2,0
+Fight and attack dey happen for Alimosho street boys don dey there,Security,23,0,Alimosho,2,1
+Injured man dey bleed for Lagos Island bus stop,Medical,19,1,Lagos Island,4,1
+Injured man dey bleed for Lagos Island bus stop person still no fit wake,Medical,21,2,Lagos Island,5,2
+One person dey vomit and no fit wake inside Yaba,Medical,23,3,Yaba,3,1
+Patient no dey breathe after accident for Ajah person still no fit wake,Medical,12,2,Ajah,5,2
+Patient no dey breathe after accident for Lekki person still no fit wake,Medical,6,1,Lekki,3,2
+House owners dey complain say em intruder don enter for Lekki boys don dey there,Security,2,4,Lekki,3,0
+Injured man dey bleed for Lagos Island bus stop person still no fit wake,Medical,19,6,Lagos Island,5,2
+Heavy smoke dey come out from market for Lekki,Fire,14,0,Lekki,3,1
+Electric pole catch fire near Surulere junction,Fire,15,6,Surulere,4,1
+Person don faint for road for Alimosho,Medical,10,6,Alimosho,2,1
+Person don faint for road for Ikorodu,Medical,17,5,Ikorodu,1,1
+Fight and attack dey happen for Surulere street,Security,16,5,Surulere,4,1
+Pileup accident just happen for Yaba bridge,Accident,19,4,Yaba,3,1
+Injured man dey bleed for Agege bus stop person still no fit wake,Medical,19,1,Agege,1,2
+House for Ikeja dey burn with flame and people dey run,Fire,18,3,Ikeja,4,1
+Heavy smoke dey come out from market for Surulere,Fire,8,5,Surulere,3,1
+Fight and attack dey happen for Surulere street,Security,7,6,Surulere,3,1
+Fight and attack dey happen for Surulere street,Security,20,6,Surulere,4,1
+Patient no dey breathe after accident for Lagos Island person still no fit wake,Medical,7,6,Lagos Island,4,2
+One person dey vomit and no fit wake inside Festac,Medical,5,6,Festac,3,1
+Accident happen for expressway near Ikeja with many injured,Accident,6,3,Ikeja,4,1
+Electric pole catch fire near Ikorodu junction,Fire,3,1,Ikorodu,4,1
+Fight and attack dey happen for Festac street boys don dey there,Security,22,3,Festac,3,1
+One person dey vomit and no fit wake inside Lagos Island,Medical,2,2,Lagos Island,3,1
+House owners dey complain say em intruder don enter for Agege,Security,17,1,Agege,4,0
+Patient no dey breathe after accident for Yaba,Medical,9,2,Yaba,3,1
+Pileup accident just happen for Ikeja bridge,Accident,7,0,Ikeja,2,1
+Accident happen for expressway near Ajah with many injured,Accident,17,6,Ajah,2,1
+Thief don use gun dey rob people for Ajah,Security,8,3,Ajah,5,1
+Injured man dey bleed for Ikorodu bus stop,Medical,23,5,Ikorodu,4,1
+Fire don start for apartment block for Ajah,Fire,0,1,Ajah,2,1
+One person dey vomit and no fit wake inside Ajah,Medical,4,0,Ajah,2,1
+Accident happen for expressway near Ikeja with many injured,Accident,19,5,Ikeja,4,1
+Injured man dey bleed for Alimosho bus stop,Medical,5,0,Alimosho,4,1
+Motorcycle hit pedestrian for Surulere during morning rush,Accident,9,5,Surulere,3,0
+Fight and attack dey happen for Lekki street,Security,10,6,Lekki,4,1
+Accident happen for expressway near Yaba with many injured,Accident,17,6,Yaba,3,1
+One person dey vomit and no fit wake inside Lagos Island,Medical,4,4,Lagos Island,3,1
+Fire don start for apartment block for Ikeja smoke everywhere,Fire,16,2,Ikeja,4,1
+Motorcycle hit pedestrian for Lekki during morning rush,Accident,20,2,Lekki,2,0
+One person dey vomit and no fit wake inside Yaba,Medical,11,5,Yaba,4,1
+Electric pole catch fire near Yaba junction,Fire,6,1,Yaba,1,1
+Boys dey break enter compound with cutlass for Ikorodu,Security,6,1,Ikorodu,2,0
+Pileup accident just happen for Alimosho bridge,Accident,18,1,Alimosho,3,1
+Thief don use gun dey rob people for Ajah boys don dey there,Security,15,6,Ajah,4,1
+Fire don start for apartment block for Festac,Fire,10,0,Festac,3,1
+House owners dey complain say em intruder don enter for Lekki,Security,19,1,Lekki,2,0
+Fire don start for apartment block for Surulere,Fire,20,5,Surulere,2,1
+Pileup accident just happen for Yaba bridge,Accident,17,2,Yaba,2,1
+Electric pole catch fire near Agege junction smoke everywhere,Fire,20,2,Agege,4,1
+Vehicle don crash for Yaba road and traffic don jam,Accident,18,3,Yaba,3,1
+Patient no dey breathe after accident for Ikorodu,Medical,17,5,Ikorodu,3,1
+Injured man dey bleed for Surulere bus stop,Medical,1,1,Surulere,4,1
+Fire don start for apartment block for Yaba,Fire,20,3,Yaba,3,1
+Motorcycle hit pedestrian for Ikorodu during morning rush,Accident,8,5,Ikorodu,2,0
+Pileup accident just happen for Lekki bridge,Accident,7,1,Lekki,4,1
+House owners dey complain say em intruder don enter for Agege boys don dey there,Security,16,4,Agege,1,0
+Motorcycle hit pedestrian for Agege during morning rush,Accident,20,3,Agege,5,0
+One person dey vomit and no fit wake inside Yaba,Medical,20,1,Yaba,3,1
+Thief don use gun dey rob people for Alimosho,Security,16,4,Alimosho,4,1
+Boys dey break enter compound with cutlass for Alimosho,Security,17,0,Alimosho,1,0
+House owners dey complain say em intruder don enter for Festac,Security,16,6,Festac,1,0
+Fight and attack dey happen for Agege street,Security,10,5,Agege,2,1
+Injured man dey bleed for Ajah bus stop,Medical,22,0,Ajah,3,1
+One person dey vomit and no fit wake inside Agege,Medical,3,0,Agege,3,1
+Injured man dey bleed for Ikeja bus stop,Medical,19,1,Ikeja,4,1
+Vehicle don crash for Surulere road and traffic don jam,Accident,18,3,Surulere,4,1
+Vehicle don crash for Lagos Island road and traffic don jam,Accident,20,0,Lagos Island,4,1
+Fight and attack dey happen for Alimosho street boys don dey there,Security,17,1,Alimosho,4,1
+Boys dey break enter compound with cutlass for Lekki,Security,8,2,Lekki,2,0
+Pileup accident just happen for Yaba bridge,Accident,18,2,Yaba,2,1
+House owners dey complain say em intruder don enter for Festac boys don dey there,Security,11,0,Festac,2,0
+Injured man dey bleed for Yaba bus stop person still no fit wake,Medical,10,4,Yaba,4,2
+Accident happen for expressway near Ikeja with many injured,Accident,9,5,Ikeja,1,1
+Injured man dey bleed for Festac bus stop,Medical,21,0,Festac,3,1
+Pileup accident just happen for Ikeja bridge,Accident,9,1,Ikeja,3,1
+Boys dey break enter compound with cutlass for Lagos Island boys don dey there,Security,15,5,Lagos Island,4,0
+Person don faint for road for Alimosho person still no fit wake,Medical,4,5,Alimosho,3,1
+House owners dey complain say em intruder don enter for Lagos Island boys don dey there,Security,12,1,Lagos Island,3,0
+Injured man dey bleed for Ajah bus stop,Medical,5,6,Ajah,3,1
+House owners dey complain say em intruder don enter for Ikeja boys don dey there,Security,16,6,Ikeja,3,0
+Electric pole catch fire near Festac junction smoke everywhere,Fire,15,0,Festac,2,1
+Pileup accident just happen for Surulere bridge,Accident,18,4,Surulere,3,1
+Person don faint for road for Ajah person still no fit wake,Medical,18,2,Ajah,3,1
+Fight and attack dey happen for Alimosho street boys don dey there,Security,2,3,Alimosho,5,1
+House for Surulere dey burn with flame and people dey run,Fire,20,3,Surulere,3,1
+Vehicle don crash for Lekki road and traffic don jam,Accident,19,3,Lekki,3,1
+Fire don start for apartment block for Lagos Island,Fire,20,3,Lagos Island,3,1
+Pileup accident just happen for Lekki bridge,Accident,6,0,Lekki,3,1
+Accident happen for expressway near Ikeja with many injured,Accident,16,4,Ikeja,3,1
+Motorcycle hit pedestrian for Yaba during morning rush,Accident,8,3,Yaba,3,0
+Pileup accident just happen for Alimosho bridge,Accident,7,2,Alimosho,2,1
+House owners dey complain say em intruder don enter for Agege,Security,9,1,Agege,2,0
+Injured man dey bleed for Lekki bus stop,Medical,18,2,Lekki,3,1
+Pileup accident just happen for Surulere bridge,Accident,18,6,Surulere,1,1
+House for Lekki dey burn with flame and people dey run,Fire,6,0,Lekki,3,1
+House owners dey complain say em intruder don enter for Ajah,Security,17,6,Ajah,3,0
+Fight and attack dey happen for Alimosho street,Security,10,3,Alimosho,4,1
+Thief don use gun dey rob people for Lekki,Security,10,3,Lekki,2,1
+Fire don start for apartment block for Lekki,Fire,23,3,Lekki,5,1
+Motorcycle hit pedestrian for Lagos Island during morning rush,Accident,20,2,Lagos Island,1,0
+Pileup accident just happen for Lekki bridge,Accident,18,4,Lekki,2,1
+Patient no dey breathe after accident for Alimosho,Medical,0,0,Alimosho,3,1
+Electric pole catch fire near Agege junction smoke everywhere,Fire,22,2,Agege,5,1
+Fire don start for apartment block for Ikorodu smoke everywhere,Fire,17,5,Ikorodu,5,1
+Heavy smoke dey come out from market for Surulere,Fire,23,5,Surulere,4,1
+Electric pole catch fire near Ajah junction,Fire,4,4,Ajah,4,1
+Person don faint for road for Yaba,Medical,23,1,Yaba,4,1
+Electric pole catch fire near Alimosho junction smoke everywhere,Fire,0,1,Alimosho,3,1
+Injured man dey bleed for Surulere bus stop,Medical,6,5,Surulere,3,1
+Accident happen for expressway near Ajah with many injured,Accident,19,2,Ajah,3,1
+Fight and attack dey happen for Surulere street,Security,12,5,Surulere,4,1
+Fight and attack dey happen for Yaba street boys don dey there,Security,4,6,Yaba,5,1
+Vehicle don crash for Festac road and traffic don jam,Accident,19,4,Festac,3,1
+One person dey vomit and no fit wake inside Yaba,Medical,8,3,Yaba,1,1
+Vehicle don crash for Alimosho road and traffic don jam,Accident,9,4,Alimosho,4,1
+Motorcycle hit pedestrian for Ajah during morning rush,Accident,16,3,Ajah,1,0
+Electric pole catch fire near Yaba junction,Fire,3,6,Yaba,5,1
+Fire don start for apartment block for Ajah,Fire,4,4,Ajah,3,1
+Person don faint for road for Surulere,Medical,11,4,Surulere,3,1
+Patient no dey breathe after accident for Lekki person still no fit wake,Medical,7,2,Lekki,4,2
+Heavy smoke dey come out from market for Lagos Island,Fire,5,0,Lagos Island,2,1
+Injured man dey bleed for Agege bus stop person still no fit wake,Medical,18,3,Agege,3,2
+One person dey vomit and no fit wake inside Festac,Medical,3,4,Festac,4,1
+Injured man dey bleed for Ajah bus stop,Medical,23,6,Ajah,3,1
+Fight and attack dey happen for Agege street,Security,18,2,Agege,4,1
+Person don faint for road for Agege,Medical,20,1,Agege,3,1
+One person dey vomit and no fit wake inside Lagos Island person still no fit wake,Medical,18,2,Lagos Island,3,1
+Fight and attack dey happen for Yaba street boys don dey there,Security,16,4,Yaba,2,1
+Person don faint for road for Lekki,Medical,13,2,Lekki,3,1
+House owners dey complain say em intruder don enter for Yaba,Security,10,6,Yaba,1,0
+Accident happen for expressway near Ajah with many injured,Accident,7,1,Ajah,3,1
+Fight and attack dey happen for Surulere street boys don dey there,Security,14,2,Surulere,5,1
+Injured man dey bleed for Lagos Island bus stop,Medical,6,6,Lagos Island,3,1
+House owners dey complain say em intruder don enter for Surulere,Security,20,2,Surulere,1,0
+Thief don use gun dey rob people for Lagos Island,Security,9,3,Lagos Island,4,1
+Electric pole catch fire near Ikeja junction smoke everywhere,Fire,10,1,Ikeja,2,1
+Accident happen for expressway near Lagos Island with many injured,Accident,20,0,Lagos Island,2,1
+Patient no dey breathe after accident for Lagos Island person still no fit wake,Medical,2,6,Lagos Island,5,2
+Person don faint for road for Lagos Island person still no fit wake,Medical,0,5,Lagos Island,2,1
+Fight and attack dey happen for Festac street,Security,22,0,Festac,5,1
+Electric pole catch fire near Agege junction,Fire,1,5,Agege,2,1
+Electric pole catch fire near Agege junction smoke everywhere,Fire,4,5,Agege,2,1
+One person dey vomit and no fit wake inside Ajah,Medical,8,3,Ajah,4,1
+One person dey vomit and no fit wake inside Ikorodu,Medical,10,6,Ikorodu,4,1
+Fire don start for apartment block for Lagos Island,Fire,15,6,Lagos Island,4,1
+Boys dey break enter compound with cutlass for Ikorodu boys don dey there,Security,12,1,Ikorodu,3,0
+Patient no dey breathe after accident for Surulere,Medical,5,6,Surulere,2,1
+Thief don use gun dey rob people for Lagos Island boys don dey there,Security,3,1,Lagos Island,3,1
+Injured man dey bleed for Surulere bus stop,Medical,12,4,Surulere,2,1
+Person don faint for road for Yaba person still no fit wake,Medical,22,5,Yaba,3,1
+Boys dey break enter compound with cutlass for Ikeja boys don dey there,Security,13,4,Ikeja,3,0
+House owners dey complain say em intruder don enter for Lagos Island,Security,8,1,Lagos Island,4,0
+Person don faint for road for Festac,Medical,18,5,Festac,3,1
+Motorcycle hit pedestrian for Surulere during morning rush,Accident,6,6,Surulere,2,0
+Fight and attack dey happen for Festac street boys don dey there,Security,14,1,Festac,4,1
+Person don faint for road for Lekki person still no fit wake,Medical,1,3,Lekki,3,1
+House owners dey complain say em intruder don enter for Agege,Security,11,3,Agege,2,0
+House owners dey complain say em intruder don enter for Agege,Security,15,2,Agege,1,0
+Person don faint for road for Agege person still no fit wake,Medical,7,3,Agege,2,1
+Boys dey break enter compound with cutlass for Ajah,Security,17,5,Ajah,2,0
+One person dey vomit and no fit wake inside Agege,Medical,0,0,Agege,2,1
+House owners dey complain say em intruder don enter for Ikorodu,Security,1,3,Ikorodu,2,0
+One person dey vomit and no fit wake inside Lekki person still no fit wake,Medical,12,6,Lekki,3,1
+Person don faint for road for Festac,Medical,18,0,Festac,2,1
+Boys dey break enter compound with cutlass for Lekki,Security,17,0,Lekki,1,0
+Pileup accident just happen for Agege bridge,Accident,8,0,Agege,2,1
+Motorcycle hit pedestrian for Festac during morning rush,Accident,16,2,Festac,2,0
+Accident happen for expressway near Yaba with many injured,Accident,19,4,Yaba,2,1
+Patient no dey breathe after accident for Agege,Medical,0,1,Agege,3,1
+Fire don start for apartment block for Surulere,Fire,16,0,Surulere,4,1
+Person don faint for road for Yaba,Medical,10,4,Yaba,3,1
+Patient no dey breathe after accident for Yaba,Medical,17,1,Yaba,2,1
+Electric pole catch fire near Lagos Island junction smoke everywhere,Fire,16,6,Lagos Island,2,1
+One person dey vomit and no fit wake inside Alimosho person still no fit wake,Medical,3,2,Alimosho,1,1
+Person don faint for road for Ajah,Medical,14,0,Ajah,3,1
+One person dey vomit and no fit wake inside Yaba,Medical,19,3,Yaba,3,1
+Injured man dey bleed for Surulere bus stop,Medical,10,0,Surulere,3,1
+House owners dey complain say em intruder don enter for Ikorodu boys don dey there,Security,13,5,Ikorodu,2,0
+Thief don use gun dey rob people for Ikeja,Security,6,2,Ikeja,2,1
+House owners dey complain say em intruder don enter for Agege,Security,3,4,Agege,2,0
+One person dey vomit and no fit wake inside Alimosho person still no fit wake,Medical,1,2,Alimosho,4,1
+Accident happen for expressway near Ajah with many injured,Accident,6,2,Ajah,4,1
+One person dey vomit and no fit wake inside Festac,Medical,11,5,Festac,2,1
+Accident happen for expressway near Yaba with many injured,Accident,7,6,Yaba,3,1
+House for Ikeja dey burn with flame and people dey run smoke everywhere,Fire,12,5,Ikeja,4,1
+House for Alimosho dey burn with flame and people dey run,Fire,9,0,Alimosho,3,1
+House owners dey complain say em intruder don enter for Ajah boys don dey there,Security,23,6,Ajah,3,0
+Injured man dey bleed for Ajah bus stop,Medical,20,6,Ajah,4,1
+Patient no dey breathe after accident for Alimosho person still no fit wake,Medical,21,4,Alimosho,4,2
+House owners dey complain say em intruder don enter for Ikeja,Security,12,5,Ikeja,3,0
+Motorcycle hit pedestrian for Surulere during morning rush,Accident,9,3,Surulere,4,0
+Patient no dey breathe after accident for Agege person still no fit wake,Medical,12,1,Agege,2,2
+Heavy smoke dey come out from market for Alimosho,Fire,21,3,Alimosho,2,1
+Heavy smoke dey come out from market for Yaba,Fire,8,1,Yaba,4,1
+Boys dey break enter compound with cutlass for Surulere,Security,14,2,Surulere,1,0
+Person don faint for road for Alimosho,Medical,7,4,Alimosho,1,1
+Boys dey break enter compound with cutlass for Surulere,Security,2,6,Surulere,3,0
+Vehicle don crash for Ikeja road and traffic don jam,Accident,19,5,Ikeja,3,1
+Electric pole catch fire near Ikeja junction,Fire,14,0,Ikeja,4,1
+House owners dey complain say em intruder don enter for Surulere boys don dey there,Security,17,6,Surulere,2,0
+Motorcycle hit pedestrian for Yaba during morning rush,Accident,18,6,Yaba,4,0
+One person dey vomit and no fit wake inside Agege,Medical,0,2,Agege,4,1
+Vehicle don crash for Ikeja road and traffic don jam,Accident,6,1,Ikeja,4,1
+Vehicle don crash for Agege road and traffic don jam,Accident,18,4,Agege,2,1
+Motorcycle hit pedestrian for Surulere during morning rush,Accident,19,2,Surulere,3,0
+Thief don use gun dey rob people for Yaba,Security,22,3,Yaba,4,1
+Accident happen for expressway near Alimosho with many injured,Accident,18,5,Alimosho,2,1
+Fight and attack dey happen for Ajah street boys don dey there,Security,19,3,Ajah,3,1
+House for Ikorodu dey burn with flame and people dey run,Fire,6,6,Ikorodu,2,1
+Injured man dey bleed for Lagos Island bus stop,Medical,2,0,Lagos Island,2,1
+Patient no dey breathe after accident for Lekki,Medical,14,2,Lekki,4,1
+Vehicle don crash for Surulere road and traffic don jam,Accident,9,1,Surulere,4,1
+One person dey vomit and no fit wake inside Yaba,Medical,22,0,Yaba,3,1
+Heavy smoke dey come out from market for Lekki,Fire,3,3,Lekki,3,1
+Pileup accident just happen for Surulere bridge,Accident,9,2,Surulere,1,1
+Patient no dey breathe after accident for Surulere,Medical,19,1,Surulere,4,1
+Patient no dey breathe after accident for Surulere person still no fit wake,Medical,0,5,Surulere,2,2
+Fight and attack dey happen for Yaba street,Security,21,4,Yaba,4,1
+Heavy smoke dey come out from market for Festac smoke everywhere,Fire,18,6,Festac,4,1
+Fire don start for apartment block for Ikeja,Fire,1,2,Ikeja,4,1
+Electric pole catch fire near Lagos Island junction,Fire,11,6,Lagos Island,2,1
+Boys dey break enter compound with cutlass for Surulere,Security,4,5,Surulere,1,0
+Injured man dey bleed for Agege bus stop,Medical,0,1,Agege,4,1
+House owners dey complain say em intruder don enter for Agege,Security,1,5,Agege,3,0
+Fire don start for apartment block for Ajah,Fire,20,1,Ajah,4,1
+Heavy smoke dey come out from market for Surulere,Fire,7,4,Surulere,5,1
+Thief don use gun dey rob people for Festac,Security,23,0,Festac,3,1
+One person dey vomit and no fit wake inside Lekki,Medical,20,5,Lekki,4,1
+Accident happen for expressway near Festac with many injured,Accident,7,2,Festac,4,1
+Electric pole catch fire near Ajah junction,Fire,0,2,Ajah,3,1
+Fire don start for apartment block for Surulere smoke everywhere,Fire,22,4,Surulere,2,1
+Patient no dey breathe after accident for Lagos Island,Medical,23,0,Lagos Island,5,1
+Heavy smoke dey come out from market for Lagos Island smoke everywhere,Fire,20,3,Lagos Island,2,1
+Injured man dey bleed for Festac bus stop,Medical,19,3,Festac,2,1
+Injured man dey bleed for Lekki bus stop,Medical,12,3,Lekki,3,1
+Fire don start for apartment block for Ikorodu smoke everywhere,Fire,19,4,Ikorodu,5,1
+Fight and attack dey happen for Agege street boys don dey there,Security,17,1,Agege,3,1
+One person dey vomit and no fit wake inside Yaba,Medical,14,6,Yaba,2,1
+Thief don use gun dey rob people for Ikeja,Security,23,1,Ikeja,3,1
+House owners dey complain say em intruder don enter for Surulere,Security,18,5,Surulere,4,0
+Person don faint for road for Alimosho,Medical,5,1,Alimosho,3,1
+House for Ajah dey burn with flame and people dey run,Fire,7,5,Ajah,2,1
+House for Yaba dey burn with flame and people dey run,Fire,11,2,Yaba,3,1
+Pileup accident just happen for Agege bridge,Accident,19,6,Agege,1,1
+House for Surulere dey burn with flame and people dey run,Fire,1,5,Surulere,2,1
+Patient no dey breathe after accident for Yaba,Medical,16,2,Yaba,4,1
+Thief don use gun dey rob people for Lekki,Security,12,5,Lekki,3,1
+Fire don start for apartment block for Festac smoke everywhere,Fire,14,1,Festac,1,1
+Boys dey break enter compound with cutlass for Yaba,Security,2,6,Yaba,2,0
+One person dey vomit and no fit wake inside Lekki person still no fit wake,Medical,6,1,Lekki,3,1
+Boys dey break enter compound with cutlass for Surulere,Security,21,1,Surulere,3,0
+Accident happen for expressway near Yaba with many injured,Accident,9,1,Yaba,3,1
+Pileup accident just happen for Ajah bridge,Accident,18,1,Ajah,2,1
+Injured man dey bleed for Festac bus stop person still no fit wake,Medical,13,5,Festac,4,2
+Injured man dey bleed for Ikeja bus stop,Medical,7,4,Ikeja,4,1
+Accident happen for expressway near Ikeja with many injured,Accident,17,2,Ikeja,5,1
+Boys dey break enter compound with cutlass for Ikeja,Security,1,4,Ikeja,4,0
+Electric pole catch fire near Ajah junction,Fire,22,1,Ajah,2,1
+Injured man dey bleed for Festac bus stop,Medical,14,6,Festac,1,1
+Injured man dey bleed for Agege bus stop,Medical,10,3,Agege,2,1
+One person dey vomit and no fit wake inside Alimosho person still no fit wake,Medical,12,6,Alimosho,3,1
+House for Ajah dey burn with flame and people dey run,Fire,19,4,Ajah,2,1
+Vehicle don crash for Alimosho road and traffic don jam,Accident,9,6,Alimosho,4,1
+Person don faint for road for Surulere,Medical,0,5,Surulere,5,1
+Fight and attack dey happen for Ikeja street,Security,19,0,Ikeja,3,1
+Person don faint for road for Alimosho person still no fit wake,Medical,17,1,Alimosho,2,1
+Patient no dey breathe after accident for Agege,Medical,7,2,Agege,3,1
+Person don faint for road for Lekki,Medical,9,1,Lekki,3,1
+Pileup accident just happen for Alimosho bridge,Accident,6,1,Alimosho,4,1
+Injured man dey bleed for Agege bus stop,Medical,6,5,Agege,4,1
+Person don faint for road for Ikeja,Medical,10,6,Ikeja,5,1
+Heavy smoke dey come out from market for Ikorodu,Fire,11,5,Ikorodu,1,1
+Boys dey break enter compound with cutlass for Ajah boys don dey there,Security,0,1,Ajah,2,0
+Injured man dey bleed for Agege bus stop person still no fit wake,Medical,14,4,Agege,3,2
+Electric pole catch fire near Surulere junction,Fire,3,0,Surulere,5,1
+Boys dey break enter compound with cutlass for Lekki,Security,11,1,Lekki,2,0
+Injured man dey bleed for Yaba bus stop,Medical,13,3,Yaba,2,1
+Injured man dey bleed for Alimosho bus stop,Medical,18,0,Alimosho,2,1
+Patient no dey breathe after accident for Surulere person still no fit wake,Medical,7,1,Surulere,3,2
+One person dey vomit and no fit wake inside Ikorodu,Medical,17,3,Ikorodu,5,1
+Injured man dey bleed for Ikeja bus stop,Medical,14,2,Ikeja,2,1
+Patient no dey breathe after accident for Festac,Medical,6,5,Festac,2,1
+Pileup accident just happen for Ikeja bridge,Accident,7,6,Ikeja,1,1
+Thief don use gun dey rob people for Ajah,Security,10,2,Ajah,2,1
+Vehicle don crash for Ikorodu road and traffic don jam,Accident,8,2,Ikorodu,2,1
+Patient no dey breathe after accident for Ikeja person still no fit wake,Medical,22,1,Ikeja,4,2
+Fight and attack dey happen for Alimosho street boys don dey there,Security,6,6,Alimosho,3,1
+One person dey vomit and no fit wake inside Lekki person still no fit wake,Medical,3,4,Lekki,2,1
+Heavy smoke dey come out from market for Yaba,Fire,9,1,Yaba,3,1
+Motorcycle hit pedestrian for Lekki during morning rush,Accident,17,3,Lekki,2,0
+Injured man dey bleed for Surulere bus stop person still no fit wake,Medical,16,3,Surulere,4,2

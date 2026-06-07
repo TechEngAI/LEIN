@@ -94,11 +94,13 @@ class SeverityScorer:
     def _load_model(self):
         if self.model is None:
             if not self.model_path.exists():
-                raise FileNotFoundError(f'Model not found at {self.model_path}')
+                if TRAINING_CSV.exists():
+                    self.train_model(str(TRAINING_CSV))
+                else:
+                    raise FileNotFoundError(f'Model not found at {self.model_path}')
             self.model = load(self.model_path)
 
     def predict_score(self, features: Dict) -> float:
-        self._load_model()
         feature_input = {
             'incident_type': [features.get('incident_type', 'Medical')],
             'lga': [features.get('lga', 'Ikeja')],
@@ -108,7 +110,12 @@ class SeverityScorer:
             'keyword_flags': [int(features.get('keyword_flags', 0))],
         }
         df = pd.DataFrame(feature_input)
-        score = float(self.model.predict(df)[0])
+        try:
+            self._load_model()
+            score = float(self.model.predict(df)[0])
+        except Exception as e:
+            print(f"Severity prediction failed: {e}")
+            score = _build_target_score(df.iloc[0])
         keywords = features.get('keywords', [])
         keyword_flags = int(features.get('keyword_flags', 0))
         if keyword_flags >= 2 or len([k for k in keywords if k in HIGH_RISK_KEYWORDS]) >= 2:

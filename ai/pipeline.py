@@ -42,7 +42,14 @@ def process_incident(description: str, lat: float, lng: float, citizen_severity_
     }
 
     priority_score = severity_scorer.predict_score(severity_features)
-    route = optimize_routing(lat, lng, available_responders, severity_features['hour_of_day'], lga)
+    route = optimize_routing(
+        incident_lat=lat,
+        incident_lng=lng,
+        responders=available_responders,
+        hour_of_day=now.hour,
+        lga=lga,
+        incident_type=classification['type'],
+    )
 
     return {
         'type': classification['type'],
