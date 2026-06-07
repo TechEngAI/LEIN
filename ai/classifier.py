@@ -11,9 +11,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
 try:
-    import anthropic
+    from groq import Groq
 except ImportError:
-    anthropic = None
+    Groq = None
 
 MODEL_PATH = Path(__file__).resolve().parents[0] / 'models' / 'classifier_fallback.joblib'
 TRAINING_CSV = Path(__file__).resolve().parents[0] / 'data' / 'emergency_train.csv'
@@ -24,32 +24,6 @@ KEYWORD_MAP = {
     'Security': ['boys', 'break', 'rob', 'steal', 'gun', 'attack', 'fight', 'intruder', 'cutlass'],
     'Accident': ['accident', 'crash', 'collision', 'pileup', 'vehicle', 'hit', 'skid', 'roadblock'],
 }
-
-
-def _build_anthropic_prompt(text: str) -> str:
-    return (
-        'You are a Lagos emergency classification assistant. '
-        'Classify the following incident text into one of these incident types: Medical, Fire, Security, Accident. '
-        'Return only valid JSON with keys type, confidence, and keywords. '
-        'type must be one of Medical, Fire, Security, Accident. '
-        'confidence must be a float between 0.0 and 1.0. '
-        'keywords must be a JSON array of strings. '
-        f'Text: "{text}"'
-    )
-
-
-def _parse_anthropic_response(response_text: str) -> Dict:
-    try:
-        data = json.loads(response_text.strip())
-        if data.get('type') not in CATEGORIES:
-            raise ValueError('invalid type')
-        return {
-            'type': data['type'],
-            'confidence': float(data.get('confidence', 0.6)),
-            'keywords': data.get('keywords', []),
-        }
-    except Exception:
-        raise ValueError('Unable to parse Anthropic response')
 
 
 def extract_keywords(text: str) -> List[str]:
@@ -121,25 +95,69 @@ class ClassifierFallback:
 def classify_incident(text: str) -> Dict:
     text = text.strip()
     if not text:
-        return {'type': 'Medical', 'confidence': 0.0, 'keywords': []}
+        return {
+            'type': 'Medical',
+            'confidence': 0.0,
+            'keywords': [],
+        }
 
     ai_mode = os.getenv('AI_MODE', 'offline').lower()
-    if ai_mode == 'online' and anthropic is not None:
-        api_key = os.getenv('ANTHROPIC_API_KEY')
-        try:
-            if not api_key:
-                raise RuntimeError('Missing ANTHROPIC_API_KEY')
-            client = anthropic.Client(api_key=api_key)
-            prompt = _build_anthropic_prompt(text)
-            completion = client.completions.create(
-                model='claude-haiku-20240307',
-                prompt=prompt,
-                max_tokens_to_sample=200,
-                temperature=0.0,
-            )
-            return _parse_anthropic_response(completion.completion)
-        except Exception:
-            pass
+    if ai_mode == 'online' and Groq is not None:
+        api_key = os.getenv('GROQ_API_KEY')
+        if api_key:
+            try:
+                client = Groq(api_key=api_key)
+
+                completion = client.chat.completions.create(
+                    model="llama-3.3-70b-versatile",
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": (
+                                "You are a Lagos emergency classification assistant. "
+                                "Classify incident text into exactly one of: "
+                                "Medical, Fire, Security, Accident. "
+                                "Return ONLY valid JSON with keys: "
+                                "type (string), confidence (float 0.0-1.0), "
+                                "keywords (array of strings). "
+                                "No explanation. No markdown. JSON only."
+                            ),
+                        },
+                        {
+                            "role": "user",
+                            "content": (
+                                f"Classify this emergency report. "
+                                f"It may be English, Pidgin, or mixed.\n"
+                                f"Text: \"{text}\""
+                            ),
+                        },
+                    ],
+                    temperature=0.0,
+                    max_tokens=200,
+                )
+
+                raw = completion.choices[0].message.content
+                raw = raw.strip()
+                if raw.startswith("```"):
+                    raw = raw.split("```")[1]
+                    if raw.startswith("json"):
+                        raw = raw[4:]
+                raw = raw.strip()
+
+                data = json.loads(raw)
+                if data.get('type') not in CATEGORIES:
+                    raise ValueError('Invalid type returned')
+
+                return {
+                    'type': data['type'],
+                    'confidence': float(
+                        data.get('confidence', 0.85)
+                    ),
+                    'keywords': data.get('keywords', []),
+                }
+
+            except Exception as e:
+                print(f"Groq classification failed: {e}")
 
     fallback = ClassifierFallback()
     return fallback.predict(text)
