@@ -27,7 +27,7 @@ export default function Navbar({ toggleTheme, isLightMode }) {
       try {
         const token = getToken();
         if (!token) return;
-        const res = await fetch('http://localhost:8000/incidents/my', {
+        const res = await fetch('https://lein-backend.onrender.com/incidents/my', {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.status === 401 || res.status === 403) {

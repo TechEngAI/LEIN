@@ -1,4 +1,4 @@
-const BASE = "http://localhost:8000";
+const BASE = "https://lein-backend.onrender.com";
 
 async function readJson(res) {
   const data = await res.json().catch(() => ({}));
